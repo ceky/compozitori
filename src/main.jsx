@@ -30,16 +30,18 @@ function App() {
       <Router>
         <Header />
 
-        <Switch>
-          <Route exact path="/">
-            <Home
-              onOpenCategory={(category) => handleCategoryClick(category)}
-            />
-          </Route>
-          <Route path="/music-style">
-            <MusicStyle selectedCategory={selectedCategory} />
-          </Route>
-        </Switch>
+        <div className="main-container">
+          <Switch>
+            <Route exact path="/">
+              <Home
+                onOpenCategory={(category) => handleCategoryClick(category)}
+              />
+            </Route>
+            <Route path="/music-style">
+              <MusicStyle selectedCategory={selectedCategory} />
+            </Route>
+          </Switch>
+        </div>
 
         <Footer />
       </Router>

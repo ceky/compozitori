@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 
 import './Home.css';
+import '../../components/common.css';
 import { getCategoriesJson } from '../../services/Categories';
 
 function Home({ onOpenCategory }) {
@@ -18,20 +19,20 @@ function Home({ onOpenCategory }) {
   }
 
   return (
-    <div>
+    <React.Fragment>
       <div className="carousel">
         {categories.length &&
           categories.map((category) => (
             <div
               key={category.id}
-              className="carousel-cell"
+              className="button--nuka"
               onClick={() => handleClick(category)}
             >
               {category.name}
             </div>
           ))}
       </div>
-    </div>
+    </React.Fragment>
   );
 }
 

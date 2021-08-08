@@ -5,9 +5,15 @@ function Footer() {
   return (
     <footer>
       <ul className="footer-container">
-        <li>Contact</li>
-        <li>About</li>
-        <li>Office</li>
+        <li>
+          <a href="#">Contact</a>
+        </li>
+        <li>
+          <a href="#">About</a>
+        </li>
+        <li>
+          <a href="#">Office</a>
+        </li>
       </ul>
     </footer>
   );

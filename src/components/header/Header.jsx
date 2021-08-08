@@ -11,7 +11,11 @@ function Header() {
 
   return (
     <header>
-      <h1 onClick={handleClick}>Header</h1>
+      <h1 className="title">
+        <a href="#" onClick={handleClick}>
+          Compozitori români
+        </a>
+      </h1>
     </header>
   );
 }

@@ -18,13 +18,13 @@ function MusicStyle({ selectedCategory }) {
   }
 
   return (
-    <main>
+    <React.Fragment>
       <h1>{selectedCategory.name}</h1>
 
       <Search
         placeholder="Spectacol"
         allowClear
-        enterButton="Cauta"
+        enterButton="Caută"
         size="large"
         onSearch={onSearch}
       />
@@ -35,7 +35,7 @@ function MusicStyle({ selectedCategory }) {
             return <div key={item.id}>{item.Titlu}</div>;
           }
         })}
-    </main>
+    </React.Fragment>
   );
 }
 
