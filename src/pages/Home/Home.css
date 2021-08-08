@@ -1,0 +1,19 @@
+.carousel {
+    background: #EEE;
+    display: flex;
+}
+  
+.carousel-cell {
+    width: 28%;
+    height: 200px;
+    margin-right: 10px;
+    background: #8C8;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 200px;
+    color: white;
+}
+
+.carousel-cell.is-selected {
+    background: #ED2;
+}

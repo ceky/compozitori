@@ -1,0 +1,17 @@
+footer {
+    background-color: #2d4c69;
+    color: #FAF7EB;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+    padding: 32px 6% 32px;
+}
+
+.footer-container {
+    list-style-type: none;
+}
+
+.footer-container li {
+
+}
