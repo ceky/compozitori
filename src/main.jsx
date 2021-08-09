@@ -8,6 +8,7 @@ import 'antd/dist/antd.css';
 import './main.css';
 import Home from './pages/Home/Home';
 import MusicStyle from './pages/MusicStyle/MusicStyle';
+import PerformanceDetails from './pages/PerformanceDetails/PerformanceDetails';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 
@@ -20,9 +21,14 @@ ReactDOM.render(
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState({});
+  const [selectedPerformance, setSelectedPerformance] = useState({});
 
   function handleCategoryClick(category) {
     setSelectedCategory(category);
+  }
+
+  function handlePerformanceTableClick(selectedPerformance) {
+    setSelectedPerformance(selectedPerformance);
   }
 
   return (
@@ -38,7 +44,15 @@ function App() {
               />
             </Route>
             <Route path="/music-style">
-              <MusicStyle selectedCategory={selectedCategory} />
+              <MusicStyle
+                selectedCategory={selectedCategory}
+                onTableRowClick={(performance) =>
+                  handlePerformanceTableClick(performance)
+                }
+              />
+            </Route>
+            <Route path="/performance-details">
+              <PerformanceDetails selectedPerformance={selectedPerformance} />
             </Route>
           </Switch>
         </div>
