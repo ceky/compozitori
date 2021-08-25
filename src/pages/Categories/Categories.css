@@ -2,7 +2,7 @@
   margin: 0 7em;
   display: flex;
   /* 179 = header + footer */
-  height: calc(100vh - 179px);
+  height: calc(100vh - 175px);
 }
 
 .categories-container .column {

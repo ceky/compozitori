@@ -57,6 +57,10 @@ menu {
   padding-left: 0;
 }
 
+.header-menu-container li a {
+  color: white;
+}
+
 .languages-container {
   list-style-type: none;
   display: flex;
@@ -73,8 +77,8 @@ menu {
   padding-right: 0;
 }
 
-.isExtended li a {
-  color: white;
+.secondary-menu li a {
+  color: black;
 }
 
 li.activeRoute a {

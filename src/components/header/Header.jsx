@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
 import './Header.css';
 import logo from '../../assets/logo.jpg';
+import classNames from 'classnames';
 
 function Header({ selectedLanguage }) {
   const history = useHistory();
@@ -16,9 +17,22 @@ function Header({ selectedLanguage }) {
     history.push('/');
   }
 
+  // Secondary menu has black menu items since the background is white
+  const isSecondaryMenu = () => {
+    return (
+      !isExtended ||
+      location.pathname === '/about-us' ||
+      location.pathname === '/contact'
+    );
+  };
+
   return (
     <header>
-      <div className={'header-container ' + (isExtended ? 'isExtended' : '')}>
+      <div
+        className={
+          'header-container ' + (isSecondaryMenu() ? 'secondary-menu' : '')
+        }
+      >
         {isExtended && (
           <div className="header-extended">
             <img src={logo} className="logo" alt="Logo" />

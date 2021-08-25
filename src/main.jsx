@@ -33,9 +33,15 @@ function App() {
   const [selectedPage, setSelectedPage] = useState('/');
 
   const bgColorClass = classNames('root-container', {
-    'green-background': selectedPage === '/compozitori',
-    'red-background': selectedPage === '/categorii',
-    'white-background': selectedPage === '/',
+    'green-background':
+      selectedPage === '/compozitori' ||
+      selectedPage === '/compozitori-detailed',
+    'red-background':
+      selectedPage === '/categorii' || selectedPage === '/category-detailed',
+    'white-background':
+      selectedPage === '/' ||
+      selectedPage === '/about-us' ||
+      selectedPage === 'contact',
   });
 
   let location = useLocation();
