@@ -17,7 +17,7 @@ a {
 }
 
 .root-container {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -28,6 +28,13 @@ a {
   background-color: #058f99;
 }
 
+.red-background {
+  background-color: #e6371f;
+}
 .white-background {
   background-color: white;
+}
+
+.page-container {
+  flex-grow: 1;
 }

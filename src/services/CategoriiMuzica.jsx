@@ -1,4 +1,4 @@
-export function getCategoriesJson() {
+export function getCategoriesMuzicaJson() {
   const categories = [
     {
       id: 1,

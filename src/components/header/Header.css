@@ -16,7 +16,7 @@ header .logo {
 .header-extended {
   display: flex;
   justify-content: space-between;
-  padding-left: 1.7em;
+  padding-left: 1.2em;
 }
 
 .header-title {
@@ -51,6 +51,10 @@ menu {
 .header-menu-container li {
   padding: 0 0.5em;
   border-right: 1px solid var(--text-color);
+}
+
+.header-menu-container li:first-child {
+  padding-left: 0;
 }
 
 .languages-container {

@@ -1,0 +1,26 @@
+.categories-container {
+  margin: 0 7em;
+  display: flex;
+  /* 179 = header + footer */
+  height: calc(100vh - 179px);
+}
+
+.categories-container .column {
+  width: 50%;
+  padding: 1em 2em;
+  list-style-type: none;
+  margin: 0;
+}
+
+.column li {
+  margin-bottom: 0.3em;
+}
+
+.categories-container .instrumente-container {
+  border-right: 1px solid black;
+  text-align: right;
+}
+
+.categories-container .instrumente-container a {
+  color: white;
+}

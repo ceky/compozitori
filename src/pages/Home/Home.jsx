@@ -4,15 +4,9 @@ import { useHistory } from 'react-router-dom';
 import './Home.css';
 import '../../components/common.css';
 import logo from '../../assets/logo.jpg';
-import { getCategoriesJson } from '../../services/Categories';
 
 function Home({ onOpenCategory }) {
   const history = useHistory();
-  const [categories, setCategories] = useState({});
-
-  useEffect(() => {
-    setCategories(getCategoriesJson());
-  }, []);
 
   function handleClick(category) {
     onOpenCategory(category);

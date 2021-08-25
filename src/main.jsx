@@ -34,6 +34,7 @@ function App() {
 
   const bgColorClass = classNames('root-container', {
     'green-background': selectedPage === '/compozitori',
+    'red-background': selectedPage === '/categorii',
     'white-background': selectedPage === '/',
   });
 
@@ -48,7 +49,7 @@ function App() {
     <div className={bgColorClass}>
       <Header selectedLanguage={selectedLanguage} />
 
-      <div>
+      <div className="page-container">
         <Switch>
           <Route exact path="/">
             <Home />
@@ -59,7 +60,7 @@ function App() {
           <Route exact path="/compozitori-detailed">
             <CompozitoriDetailed />
           </Route>
-          <Route exact path="/categories">
+          <Route exact path="/categorii">
             <Categories />
           </Route>
           <Route exact path="/category-detailed">

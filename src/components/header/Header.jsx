@@ -45,10 +45,10 @@ function Header({ selectedLanguage }) {
             </li>
             <li
               className={
-                location.pathname === '/categories' ? 'activeRoute' : ''
+                location.pathname === '/categorii' ? 'activeRoute' : ''
               }
             >
-              <a href="/categories">CATEGORII</a>
+              <a href="/categorii">CATEGORII</a>
             </li>
             <li
               className={location.pathname === '/about-us' ? 'activeRoute' : ''}
