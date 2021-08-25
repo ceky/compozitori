@@ -28,16 +28,16 @@ function Header({ isExtended }) {
         <menu>
           <ul className="header-menu-container">
             <li>
-              <a href="#">COMPOZITORI</a>
+              <a href="/compozitori">COMPOZITORI</a>
             </li>
             <li>
-              <a href="#">CATEGORII</a>
+              <a href="/categories">CATEGORII</a>
             </li>
             <li>
-              <a href="#">DESPRE NOI</a>
+              <a href="/about-us">DESPRE NOI</a>
             </li>
             <li>
-              <a href="#">CONTACT</a>
+              <a href="/contact">CONTACT</a>
             </li>
           </ul>
           <ul className="languages-container">

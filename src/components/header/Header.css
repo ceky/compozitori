@@ -5,7 +5,7 @@ header {
 .logo {
   position: absolute;
   left: 1em;
-  top: 3.5em;
+  top: 4.2em;
   width: 60px;
 }
 
@@ -66,4 +66,8 @@ menu {
 .languages-container li {
   padding: 0 0.5em;
   border-left: 1px solid var(--text-color);
+}
+
+.languages-container li:last-child {
+  padding-right: 0;
 }

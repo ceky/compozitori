@@ -1,0 +1,17 @@
+.performance-key {
+  color: #999;
+}
+
+.performance-details {
+  color: #333;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+}
+
+.page-header h1 {
+  margin-bottom: 0;
+  margin-left: 0.5em;
+}

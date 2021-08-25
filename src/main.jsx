@@ -3,12 +3,14 @@ import ReactDOM from 'react-dom';
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import 'antd/dist/antd.css';
-
 import './main.css';
 import Home from './pages/Home/Home';
-import MusicStyle from './pages/MusicStyle/MusicStyle';
-import PerformanceDetails from './pages/PerformanceDetails/PerformanceDetails';
+import Compozitori from './pages/Compozitori/Compozitori';
+import CompozitoriDetailed from './pages/CompozitoriDetailed/CompozitoriDetailed';
+import Categories from './pages/Categories/Categories';
+import CategoryDetailed from './pages/CategoryDetailed/CategoryDetailed';
+import AboutUs from './pages/AboutUs/AboutUs';
+import Contact from './pages/Contact/Contact';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 
@@ -20,17 +22,6 @@ ReactDOM.render(
 );
 
 function App() {
-  const [selectedCategory, setSelectedCategory] = useState({});
-  const [selectedPerformance, setSelectedPerformance] = useState({});
-
-  function handleCategoryClick(category) {
-    setSelectedCategory(category);
-  }
-
-  function handlePerformanceTableClick(selectedPerformance) {
-    setSelectedPerformance(selectedPerformance);
-  }
-
   return (
     <React.Fragment>
       <Router>
@@ -39,20 +30,25 @@ function App() {
         <div className="main-container">
           <Switch>
             <Route exact path="/">
-              <Home
-                onOpenCategory={(category) => handleCategoryClick(category)}
-              />
+              <Home />
             </Route>
-            <Route path="/music-style">
-              <MusicStyle
-                selectedCategory={selectedCategory}
-                onTableRowClick={(performance) =>
-                  handlePerformanceTableClick(performance)
-                }
-              />
+            <Route exact path="/compozitori">
+              <Compozitori />
             </Route>
-            <Route path="/performance-details">
-              <PerformanceDetails selectedPerformance={selectedPerformance} />
+            <Route exact path="/compozitori-detailed">
+              <CompozitoriDetailed />
+            </Route>
+            <Route exact path="/categories">
+              <Categories />
+            </Route>
+            <Route exact path="/category-detailed">
+              <CategoryDetailed />
+            </Route>
+            <Route exact path="/about-us">
+              <AboutUs />
+            </Route>
+            <Route exact path="/contact">
+              <Contact />
             </Route>
           </Switch>
         </div>
