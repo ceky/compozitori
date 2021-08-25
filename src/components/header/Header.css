@@ -6,7 +6,7 @@ header {
   position: absolute;
   left: 1em;
   top: 4.2em;
-  width: 60px;
+  width: 70px;
 }
 
 .header-container {
@@ -16,7 +16,7 @@ header {
 .header-extended {
   display: flex;
   justify-content: space-between;
-  padding-left: 2em;
+  padding-left: 1.7em;
 }
 
 .header-title {
@@ -25,7 +25,7 @@ header {
 }
 
 .header-title a {
-  font-size: 2.4em;
+  font-size: 2.7em;
   color: var(--text-color);
 }
 
@@ -70,4 +70,8 @@ menu {
 
 .languages-container li:last-child {
   padding-right: 0;
+}
+
+.isExtended li a {
+  color: white;
 }

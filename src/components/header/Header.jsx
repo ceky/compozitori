@@ -1,10 +1,16 @@
-import React from 'react';
-import { useHistory } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { useHistory, useLocation } from 'react-router-dom';
 import './Header.css';
 import logo from '../../assets/logo.jpg';
 
-function Header({ isExtended }) {
+function Header() {
   const history = useHistory();
+  const location = useLocation();
+  const [isExtended, setIsExtended] = useState(false);
+
+  useEffect(() => {
+    setIsExtended(location.pathname !== '/');
+  }, [location]);
 
   function handleClick() {
     history.push('/');
@@ -12,19 +18,22 @@ function Header({ isExtended }) {
 
   return (
     <header>
-      <img src={logo} className="logo" alt="Logo" />
-      <div className="header-container">
-        <div className="header-extended">
-          <h2 className="header-title">
-            <a href="#" onClick={handleClick}>
-              Catalog muzical
-            </a>
-          </h2>
-          <p className="header-description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-            pulvinar et turpis vitae bibendum. Class aptent taciti sociosqu ad.
-          </p>
-        </div>
+      <div className={'header-container ' + (isExtended ? 'isExtended' : '')}>
+        {isExtended && (
+          <div className="header-extended">
+            <img src={logo} className="logo" alt="Logo" />
+            <h2 className="header-title">
+              <a href="#" onClick={handleClick}>
+                Catalog muzical
+              </a>
+            </h2>
+            <p className="header-description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+              pulvinar et turpis vitae bibendum. Class aptent taciti sociosqu
+              ad.
+            </p>
+          </div>
+        )}
         <menu>
           <ul className="header-menu-container">
             <li>
