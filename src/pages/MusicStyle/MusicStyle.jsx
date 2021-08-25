@@ -4,8 +4,6 @@ import { Table } from 'antd';
 
 import './MusicStyle.css';
 import { getPerformanceListJson } from '../../services/PerformanceList';
-import PageHeader from '../../components/PageHeader/PageHeader';
-import SearchBar from '../../components/SearchBar/SearchBar';
 
 function MusicStyle({ selectedCategory, onTableRowClick }) {
   const history = useHistory();
@@ -71,12 +69,12 @@ function MusicStyle({ selectedCategory, onTableRowClick }) {
     history.push('/performance-details');
   }
 
+  function handleSearch(searchValue, selectedCriteria) {
+    console.log(searchValue, selectedCriteria);
+  }
+
   return (
     <React.Fragment>
-      <PageHeader title={selectedCategory.name} />
-
-      <SearchBar />
-
       <Table
         columns={columns}
         dataSource={data}

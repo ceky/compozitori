@@ -1,18 +1,69 @@
 header {
-  background-color: #2d4c69;
-  color: #faf7eb;
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 2em;
-  padding: 2em;
+  border-bottom: 1px solid var(--text-color);
 }
 
-.title {
-  color: white;
+.logo {
+  position: absolute;
+  left: 1em;
+  top: 3.5em;
+  width: 60px;
+}
+
+.header-container {
+  margin: 3em 7em 0em;
+}
+
+.header-extended {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 2em;
+}
+
+.header-title {
+  font-family: 'Big Caslon', sans-serif;
   margin-bottom: 0;
 }
 
-.title a {
-  color: white;
+.header-title a {
+  font-size: 2.4em;
+  color: var(--text-color);
+}
+
+.header-description {
+  width: 390px;
+  font-size: 1.2em;
+  text-align: right;
+}
+
+menu {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.header-menu-container {
+  list-style-type: none;
+  display: flex;
+  font-size: 1.2em;
+  margin: 0;
+  padding: 0;
+}
+
+.header-menu-container li {
+  padding: 0 0.5em;
+  border-right: 1px solid var(--text-color);
+}
+
+.languages-container {
+  list-style-type: none;
+  display: flex;
+  font-size: 1.2em;
+  margin: 0;
+  padding: 0;
+}
+
+.languages-container li {
+  padding: 0 0.5em;
+  border-left: 1px solid var(--text-color);
 }

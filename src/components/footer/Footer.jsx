@@ -6,13 +6,10 @@ function Footer() {
     <footer>
       <ul className="footer-container">
         <li>
-          <a href="#">Contact</a>
+          <a href="#">AFCN LOGO</a>
         </li>
         <li>
-          <a href="#">About</a>
-        </li>
-        <li>
-          <a href="#">Office</a>
+          <a href="#">ALTI PARTENERI LOGO</a>
         </li>
       </ul>
     </footer>

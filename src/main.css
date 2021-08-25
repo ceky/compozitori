@@ -1,12 +1,19 @@
+:root {
+  --main-bg-color: #edebdd;
+  --text-color: #000;
+  --highlight-color: #e23f26;
+  --btn-secondoray-color: #143051; /** Toate **/
+}
+
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background: #faf7eb;
-  color: #214261;
+  font-family: 'Roboto', sans-serif;
+  background: var(--main-bg-color);
+  color: var(--text-color);
   margin: 0;
+}
+
+a {
+  color: var(--text-color);
 }
 
 .main-container {
