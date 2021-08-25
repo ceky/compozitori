@@ -3,7 +3,7 @@ import { useHistory, useLocation } from 'react-router-dom';
 import './Header.css';
 import logo from '../../assets/logo.jpg';
 
-function Header() {
+function Header({ selectedLanguage }) {
   const history = useHistory();
   const location = useLocation();
   const [isExtended, setIsExtended] = useState(false);
@@ -36,24 +36,36 @@ function Header() {
         )}
         <menu>
           <ul className="header-menu-container">
-            <li>
+            <li
+              className={
+                location.pathname === '/compozitori' ? 'activeRoute' : ''
+              }
+            >
               <a href="/compozitori">COMPOZITORI</a>
             </li>
-            <li>
+            <li
+              className={
+                location.pathname === '/categories' ? 'activeRoute' : ''
+              }
+            >
               <a href="/categories">CATEGORII</a>
             </li>
-            <li>
+            <li
+              className={location.pathname === '/about-us' ? 'activeRoute' : ''}
+            >
               <a href="/about-us">DESPRE NOI</a>
             </li>
-            <li>
+            <li
+              className={location.pathname === '/contact' ? 'activeRoute' : ''}
+            >
               <a href="/contact">CONTACT</a>
             </li>
           </ul>
           <ul className="languages-container">
-            <li>
+            <li className={selectedLanguage === 'ro' ? 'activeRoute' : ''}>
               <a href="#">RO</a>
             </li>
-            <li>
+            <li className={selectedLanguage === 'en' ? 'activeRoute' : ''}>
               <a href="#">EN</a>
             </li>
           </ul>

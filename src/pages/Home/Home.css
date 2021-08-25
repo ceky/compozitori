@@ -1,4 +1,32 @@
-.carousel {
+.home-container {
+  margin: 4em auto;
+  max-width: 580px;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-container .main-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  width: 100%;
+}
+
+.home-container .main-container .logo {
+  width: 100px;
+  height: 100px;
+  margin-right: 3em;
+}
+
+.home-container .main-container h1 {
+  font-size: 4em;
+  font-family: 'Big Caslon', sans-serif;
+  font-weight: 400;
+}
+
+.home-container .main-description {
+  margin: 0;
+  margin-bottom: 1em;
 }

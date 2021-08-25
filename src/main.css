@@ -16,6 +16,18 @@ a {
   color: var(--text-color);
 }
 
-.main-container {
-  margin: 2em;
+.root-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.green-background {
+  background-color: #058f99;
+}
+
+.white-background {
+  background-color: white;
 }
