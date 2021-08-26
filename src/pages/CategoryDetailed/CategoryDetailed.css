@@ -1,3 +1,8 @@
 .category-details-container {
   margin: 2em 7em;
 }
+
+.category-details-container .category-name {
+  font-family: 'Big Caslon', sans-serif;
+  font-size: 1.8em;
+}

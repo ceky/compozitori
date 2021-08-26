@@ -1,0 +1,46 @@
+table {
+  border-collapse: collapse;
+  font-size: 0.9em;
+  width: 100%;
+}
+
+.table-categories-container tr th {
+  text-align: left;
+  border-bottom: 1px solid rgba(255 255 255 / 60%);
+}
+
+.table-categories-container tr td {
+  text-align: left;
+  border-bottom: 1px solid rgba(255 255 255 / 60%);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.table-categories-container tr:last-child td {
+  border-bottom: none;
+}
+
+.table-categories-container .opera-compozitor {
+  max-width: 300px;
+  padding-left: 7.5em;
+}
+
+.table-categories-container .opera-title {
+  max-width: 400px;
+  color: white;
+  opacity: 0.8;
+}
+
+.table-categories-container .opera-an {
+  max-width: 120px;
+}
+
+.table-categories-container .opera-stil {
+  max-width: 250px;
+}
+
+.table-categories-container .opera-detalii {
+  min-width: 200px;
+  padding-right: 7.5em;
+}
