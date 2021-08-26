@@ -1,0 +1,40 @@
+table {
+  border-collapse: collapse;
+  font-size: 0.9em;
+  width: 100%;
+}
+
+.table-compozitori-container tr th {
+  text-align: left;
+  border-bottom: 1px solid rgba(255 255 255 / 60%);
+}
+
+.table-compozitori-container tr td {
+  text-align: left;
+  border-bottom: 1px solid rgba(255 255 255 / 60%);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.table-compozitori-container tr:last-child td {
+  border-bottom: none;
+}
+
+.table-compozitori-container .opera-title {
+  color: white;
+  padding-left: 7.5em;
+  max-width: 500px;
+}
+
+.table-compozitori-container .opera-an {
+  max-width: 150px;
+}
+
+.table-compozitori-container .opera-stil {
+  max-width: 250px;
+}
+.table-compozitori-container .opera-detalii {
+  min-width: 300px;
+  padding-right: 7.5em;
+}

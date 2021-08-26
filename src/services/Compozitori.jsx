@@ -92,7 +92,8 @@ export function getCompozitoriJson() {
       NumeCompozitor: 'ALEXANDRA Liana',
       n: '27 Mai 1947',
       Stil: 'Muzică simfonică',
-      Titlu: 'Concert pentru violă, flaut și orchestră de cameră op  23',
+      Titlu:
+        'Concert pentru violă, flaut și orchestră de cameră op  23 test test',
       AnulComp: 1982,
       Detalii: '',
     },

@@ -1,3 +1,7 @@
+.compozitor-details {
+  margin-bottom: 2em;
+}
+
 .compozitor-details-container {
   margin: 2em 7em;
   position: relative;
@@ -22,5 +26,6 @@
   top: 0;
 }
 
-.compozitor-details-container .table-container {
+.compozitor-details .table-container {
+  margin-top: 4em;
 }

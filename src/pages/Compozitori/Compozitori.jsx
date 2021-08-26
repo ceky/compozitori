@@ -6,7 +6,7 @@ import AlphabetFilter from '../../components/alphabetFilter/AlphabetFilter';
 
 function Compozitori({ handleCompozitorSelect }) {
   const [initialCompozitoriList] = useState(getCompozitoriJson());
-  const [filteredCompozitori, setCompozitori] = useState([]);
+  const [filteredCompozitori, setFilteredCompozitori] = useState([]);
   const [activeLetter, setActiveLetter] = useState('a');
 
   useEffect(() => {
@@ -15,7 +15,7 @@ function Compozitori({ handleCompozitorSelect }) {
     const filteredList = initialCompozitoriList.filter(
       (compozitor) => getFirstLetter(compozitor.NumeCompozitor) === activeLetter
     );
-    setCompozitori(filteredList);
+    setFilteredCompozitori(filteredList);
   }, [activeLetter]);
 
   const getFirstLetter = (compozitor) => {
@@ -29,7 +29,10 @@ function Compozitori({ handleCompozitorSelect }) {
   };
 
   const onClickCompozitor = (compozitor) => {
-    handleCompozitorSelect(compozitor);
+    const opereCompozitor = initialCompozitoriList.filter(
+      (item) => item.NumeCompozitor === compozitor.NumeCompozitor
+    );
+    handleCompozitorSelect(opereCompozitor);
   };
 
   return (

@@ -32,7 +32,7 @@ ReactDOM.render(
 function App() {
   const [selectedLanguage] = useState('ro');
   const [selectedPage, setSelectedPage] = useState('/');
-  const [selectedCompozitor, setSelectedCompozitor] = useState(null);
+  const [selectedOpereCompozitor, setSelectedOpereCompozitor] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState(null);
 
   const history = useHistory();
@@ -56,10 +56,10 @@ function App() {
   }, [location]);
 
   useEffect(() => {
-    if (selectedCompozitor) {
+    if (selectedOpereCompozitor) {
       history.push('/compozitori-detailed');
     }
-  }, [selectedCompozitor]);
+  }, [selectedOpereCompozitor]);
 
   useEffect(() => {
     if (selectedCategory) {
@@ -67,8 +67,8 @@ function App() {
     }
   }, [selectedCategory]);
 
-  const handleCompozitorSelect = (compozitor) => {
-    setSelectedCompozitor(compozitor);
+  const handleCompozitorSelect = (opereCompozitor) => {
+    setSelectedOpereCompozitor(opereCompozitor);
   };
 
   const handleInstrumentSelect = (instrument) => {
@@ -96,13 +96,13 @@ function App() {
           </Route>
           <Route exact path="/compozitori">
             <Compozitori
-              handleCompozitorSelect={(compozitor) =>
-                handleCompozitorSelect(compozitor)
+              handleCompozitorSelect={(opereCompozitor) =>
+                handleCompozitorSelect(opereCompozitor)
               }
             />
           </Route>
           <Route exact path="/compozitori-detailed">
-            <CompozitoriDetailed compozitor={selectedCompozitor} />
+            <CompozitoriDetailed opereCompozitor={selectedOpereCompozitor} />
           </Route>
           <Route exact path="/categorii">
             <Categories
