@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { Table } from 'antd';
 
 import './MusicStyle.css';
-import { getPerformanceListJson } from '../../services/PerformanceList';
+import { getPerformanceListJson } from '../../services/Compozitori';
 
 function MusicStyle({ selectedCategory, onTableRowClick }) {
   const history = useHistory();

@@ -5,6 +5,7 @@ import {
   Switch,
   Route,
   useLocation,
+  useHistory,
 } from 'react-router-dom';
 import classNames from 'classnames';
 
@@ -31,6 +32,9 @@ ReactDOM.render(
 function App() {
   const [selectedLanguage] = useState('ro');
   const [selectedPage, setSelectedPage] = useState('/');
+  const [selectedCompozitor, setSelectedCompozitor] = useState(null);
+
+  const history = useHistory();
 
   const bgColorClass = classNames('root-container', {
     'green-background':
@@ -51,6 +55,16 @@ function App() {
     console.log(selectedPage);
   }, [location]);
 
+  useEffect(() => {
+    if (selectedCompozitor) {
+      history.push('/compozitori-detailed');
+    }
+  }, [selectedCompozitor]);
+
+  const handleCompozitorSelect = (compozitor) => {
+    setSelectedCompozitor(compozitor);
+  };
+
   return (
     <div className={bgColorClass}>
       <Header selectedLanguage={selectedLanguage} />
@@ -61,10 +75,14 @@ function App() {
             <Home />
           </Route>
           <Route exact path="/compozitori">
-            <Compozitori />
+            <Compozitori
+              handleCompozitorSelect={(compozitor) =>
+                handleCompozitorSelect(compozitor)
+              }
+            />
           </Route>
           <Route exact path="/compozitori-detailed">
-            <CompozitoriDetailed />
+            <CompozitoriDetailed compozitor={selectedCompozitor} />
           </Route>
           <Route exact path="/categorii">
             <Categories />

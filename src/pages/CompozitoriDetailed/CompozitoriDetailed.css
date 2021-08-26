@@ -1,0 +1,26 @@
+.compozitor-details-container {
+  margin: 2em 7em;
+  position: relative;
+}
+
+.compozitor-details-container .name {
+  color: white;
+  font-family: 'Big Caslon', sans-serif;
+  font-size: 2.6em;
+  font-weight: 400;
+}
+
+.compozitor-details-container .description {
+  color: black;
+  max-width: 900px;
+}
+
+.compozitor-details-container .avatar {
+  width: 150px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.compozitor-details-container .table-container {
+}
