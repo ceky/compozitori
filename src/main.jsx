@@ -33,6 +33,7 @@ function App() {
   const [selectedLanguage] = useState('ro');
   const [selectedPage, setSelectedPage] = useState('/');
   const [selectedCompozitor, setSelectedCompozitor] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState(null);
 
   const history = useHistory();
 
@@ -52,7 +53,6 @@ function App() {
 
   useEffect(() => {
     setSelectedPage(location.pathname);
-    console.log(selectedPage);
   }, [location]);
 
   useEffect(() => {
@@ -61,8 +61,28 @@ function App() {
     }
   }, [selectedCompozitor]);
 
+  useEffect(() => {
+    if (selectedCategory) {
+      history.push('/category-detailed');
+    }
+  }, [selectedCategory]);
+
   const handleCompozitorSelect = (compozitor) => {
     setSelectedCompozitor(compozitor);
+  };
+
+  const handleInstrumentSelect = (instrument) => {
+    setSelectedCategory({
+      fileredBy: 'instrument',
+      name: instrument,
+    });
+  };
+
+  const handleCategorieMuzicalaSelect = (categorieMuzicala) => {
+    setSelectedCategory({
+      fileredBy: 'categorieMuzicala',
+      name: categorieMuzicala.name,
+    });
   };
 
   return (
@@ -85,10 +105,17 @@ function App() {
             <CompozitoriDetailed compozitor={selectedCompozitor} />
           </Route>
           <Route exact path="/categorii">
-            <Categories />
+            <Categories
+              handleInstrumentSelect={(instrument) =>
+                handleInstrumentSelect(instrument)
+              }
+              handleCategorieMuzicalaSelect={(categorieMuzicala) =>
+                handleCategorieMuzicalaSelect(categorieMuzicala)
+              }
+            />
           </Route>
           <Route exact path="/category-detailed">
-            <CategoryDetailed />
+            <CategoryDetailed category={selectedCategory} />
           </Route>
           <Route exact path="/about-us">
             <AboutUs />

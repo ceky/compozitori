@@ -52,14 +52,20 @@ function Header({ selectedLanguage }) {
           <ul className="header-menu-container">
             <li
               className={
-                location.pathname === '/compozitori' ? 'activeRoute' : ''
+                location.pathname === '/compozitori' ||
+                location.pathname === '/compozitori-detailed'
+                  ? 'activeRoute'
+                  : ''
               }
             >
               <a href="/compozitori">COMPOZITORI</a>
             </li>
             <li
               className={
-                location.pathname === '/categorii' ? 'activeRoute' : ''
+                location.pathname === '/categorii' ||
+                location.pathname === '/category-detailed'
+                  ? 'activeRoute'
+                  : ''
               }
             >
               <a href="/categorii">CATEGORII</a>
