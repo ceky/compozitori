@@ -26,7 +26,7 @@ function Home({ onOpenCategory }) {
         Cras aliquam lorem quis vestibulum pellentesque. Donec tincidunt rhoncus
         neque, at egestas lorem aliquam fringilla. Phasellus.
       </p>
-      <input type="text" />
+      <input className="search-input" placeholder="Caută" type="search" />
     </main>
   );
 }
