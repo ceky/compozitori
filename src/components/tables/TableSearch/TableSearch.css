@@ -1,0 +1,43 @@
+.table-search-container {
+  margin: 2em 0;
+}
+
+table {
+  border-collapse: collapse;
+  font-size: 0.9em;
+  width: 100%;
+}
+
+.table-search-container tr th {
+  text-align: left;
+  border-bottom: 1px solid rgba(0 0 0 / 60%);
+}
+
+.table-search-container tr td {
+  text-align: left;
+  border-bottom: 1px solid rgba(0 0 0 / 60%);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.table-search-container tr:last-child td {
+  border-bottom: none;
+}
+
+.table-search-container .opera-compozitor {
+  padding-left: 7.5em;
+  max-width: 400px;
+}
+
+.table-search-container .opera-title {
+  max-width: 400px;
+}
+
+.table-search-container .opera-stil {
+  max-width: 250px;
+}
+.table-search-container .opera-detalii {
+  min-width: 300px;
+  padding-right: 7.5em;
+}

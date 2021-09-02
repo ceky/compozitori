@@ -58,17 +58,7 @@ input::-webkit-search-cancel-button {
   -moz-border-radius: 10em;
   border-radius: 10em;
 
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
-.home-container input[type='search']:focus {
   width: 130px;
   background-color: #fff;
-  border-color: #66cc75;
-
-  -webkit-box-shadow: 0 0 5px rgba(109, 207, 246, 0.5);
-  -moz-box-shadow: 0 0 5px rgba(109, 207, 246, 0.5);
-  box-shadow: 0 0 5px rgba(109, 207, 246, 0.5);
+  border-color: #121412;
 }
