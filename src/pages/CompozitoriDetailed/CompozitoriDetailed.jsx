@@ -16,11 +16,11 @@ function CompozitoriDetailed({ opereCompozitor }) {
     <div className="compozitor-details">
       <div className="compozitor-details-container">
         <h1 className="name">{compozitor.NumeCompozitor}</h1>
-        <p className="description">{compozitor.Description}</p>
         <img
           className="avatar"
           src={images[`/src/assets/compozitori/${compozitor.Photo}`].default}
         />
+        <p className="description">{compozitor.Description}</p>
       </div>
       <div className="table-container">
         <TableCompozitor opereCompozitor={opereCompozitor} />

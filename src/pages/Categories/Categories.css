@@ -24,3 +24,9 @@
 .categories-container .instrumente-container a {
   color: white;
 }
+
+@media only screen and (max-width: 480px) {
+  .categories-container {
+    margin: 0 auto;
+  }
+}

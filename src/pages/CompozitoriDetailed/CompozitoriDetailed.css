@@ -29,3 +29,13 @@
 .compozitor-details .table-container {
   margin-top: 4em;
 }
+
+@media only screen and (max-width: 480px) {
+  .compozitor-details-container {
+    margin: 1em;
+  }
+
+  .compozitor-details-container .avatar {
+    position: static;
+  }
+}
