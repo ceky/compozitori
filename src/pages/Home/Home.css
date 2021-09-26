@@ -15,9 +15,7 @@
 }
 
 .home-container .main-container .logo {
-  width: 100px;
-  height: 100px;
-  margin-right: 3em;
+  max-width: 576px;
 }
 
 .home-container .main-container h1 {

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import './Home.css';
 import '../../components/common.css';
-import logo from '../../assets/logo.jpg';
+import logo from '../../assets/Logo_blackred.png';
 import TableSearch from '../../components/tables/TableSearch/TableSearch';
 import { getCompozitoriJson } from '../../services/Compozitori';
 
@@ -19,7 +19,6 @@ function Home() {
       <main className="home-container">
         <div className="main-container">
           <img src={logo} className="logo" alt="Logo" />
-          <h1>Catalog muzical</h1>
         </div>
         <p className="main-description">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis cursus

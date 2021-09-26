@@ -4,10 +4,9 @@ header {
 
 header .logo {
   position: absolute;
-  left: 1em;
+  left: 0;
   top: 1.2em;
-  width: 70px;
-  height: 70px;
+  width: 470px;
 }
 
 .header-container {
@@ -16,18 +15,9 @@ header .logo {
 
 .header-extended {
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
   padding-left: 1.2em;
-}
-
-.header-title {
-  font-family: 'Big Caslon', sans-serif;
-  margin-bottom: 0;
-}
-
-.header-title a {
-  font-size: 1.5em;
-  color: var(--text-color);
+  margin-bottom: 1.2em;
 }
 
 .header-description {
