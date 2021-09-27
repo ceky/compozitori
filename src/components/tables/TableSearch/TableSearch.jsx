@@ -1,32 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './TableSearch.css';
 
-function TableSearch({ searchValue, compozitori }) {
-  const [filteredCompozitori, setFilteredCompozitori] = useState([]);
-
-  useEffect(() => {
-    if (!searchValue.length) {
-      setFilteredCompozitori([]);
-      return;
-    }
-
-    const filteredList = compozitori.filter((compozitie) => {
-      return (
-        compozitie.NumeCompozitor.toLowerCase().includes(searchValue) ||
-        compozitie.Titlu.toLowerCase().includes(searchValue) ||
-        compozitie.Stil.toLowerCase().includes(searchValue) ||
-        compozitie.Detalii.toLowerCase().includes(searchValue)
-      );
-    });
-
-    console.log(filteredList);
-
-    setFilteredCompozitori(filteredList);
-  }, [compozitori, searchValue]);
-
+function TableSearch({ compozitori }) {
   return (
     <div className="table-search-container">
-      {!!filteredCompozitori.length && (
+      {!!compozitori.length && (
         <table>
           <thead>
             <tr>
@@ -37,12 +15,12 @@ function TableSearch({ searchValue, compozitori }) {
             </tr>
           </thead>
           <tbody>
-            {filteredCompozitori.map((opera, key) => (
+            {compozitori.map((opera, key) => (
               <tr key={key}>
-                <td className="opera-compozitor">{opera.NumeCompozitor}</td>
-                <td>{opera.Titlu}</td>
-                <td>{opera.Stil}</td>
-                <td>{opera.Detalii}</td>
+                <td className="opera-compozitor">{opera.numeCompozitor}</td>
+                <td>{opera.titlu}</td>
+                <td>{opera.stil}</td>
+                <td>{opera.details}</td>
               </tr>
             ))}
           </tbody>

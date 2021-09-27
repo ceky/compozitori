@@ -5,12 +5,20 @@ import '../../components/common.css';
 import logo from '../../assets/Logo_blackred.png';
 import TableSearch from '../../components/tables/TableSearch/TableSearch';
 import { getCompozitoriJson } from '../../services/Compozitori';
+import { findUrl } from '../../services/urls';
+
+import axios from 'axios';
 
 function Home() {
   const [searchValue, setSearchValue] = useState('');
-  const [compozitoriList] = useState(getCompozitoriJson());
+  const [compozitoriList, setCompozitoriList] = useState([]);
 
   function onChangeSearch(event) {
+    axios
+      .get(`${findUrl}${event.target.value.toLowerCase()}`)
+      .then((response) => {
+        setCompozitoriList(response.data);
+      });
     setSearchValue(event.target.value.toLowerCase());
   }
 
@@ -37,7 +45,7 @@ function Home() {
           value={searchValue}
         />
       </main>
-      <TableSearch searchValue={searchValue} compozitori={compozitoriList} />
+      <TableSearch compozitori={compozitoriList} />
     </div>
   );
 }
