@@ -9,7 +9,7 @@ function CategoryDetailed({ category }) {
       <div className="category-details-container">
         <p className="category-name">{category.name}</p>
       </div>
-      <TableCategories opere={category.operePerInstrument} />
+      <TableCategories opere={category.opere} />
     </div>
   );
 }

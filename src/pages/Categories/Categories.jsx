@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { getCategoriesInstrumenteJson } from '../../services/CategoriiInstrumente';
 import { getCategoriesMuzicaJson } from '../../services/CategoriiMuzica';
-import { getOperaInstrumentUrl } from '../../services/urls';
+import { getOpereInstrumentUrl, getOpereStilUrl } from '../../services/urls';
 
 import axios from 'axios';
 
@@ -18,19 +18,16 @@ function Categories({ handleInstrumentSelect, handleCategorieMuzicalaSelect }) {
 
   const onClickInstrument = (instrument) => {
     axios
-      .get(`${getOperaInstrumentUrl}${instrument.toLowerCase()}`)
+      .get(`${getOpereInstrumentUrl}${instrument.toLowerCase()}`)
       .then((response) => {
         handleInstrumentSelect(instrument, response.data);
       });
   };
 
   const onClickCategorieMuzicala = (categorieMuzicala) => {
-    axios
-      .get(`${getOperaInstrumentUrl}${categorieMuzicala.toLowerCase()}`)
-      .then((response) => {
-        console.log(response);
-      });
-    // handleCategorieMuzicalaSelect(categorieMuzicala);
+    axios.get(`${getOpereStilUrl}${categorieMuzicala}`).then((response) => {
+      handleCategorieMuzicalaSelect(categorieMuzicala, response.data);
+    });
   };
 
   return (
@@ -48,7 +45,7 @@ function Categories({ handleInstrumentSelect, handleCategorieMuzicalaSelect }) {
         {categoriesMuzica.map((muzica, key) => (
           <li key={key}>
             <a href="#" onClick={() => onClickCategorieMuzicala(muzica)}>
-              {muzica.name}
+              {muzica}
             </a>
           </li>
         ))}

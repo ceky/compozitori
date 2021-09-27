@@ -75,14 +75,15 @@ function App() {
     setSelectedCategory({
       fileredBy: 'instrument',
       name: instrument,
-      operePerInstrument,
+      opere: operePerInstrument,
     });
   };
 
-  const handleCategorieMuzicalaSelect = (categorieMuzicala) => {
+  const handleCategorieMuzicalaSelect = (categorieMuzicala, operePerStil) => {
     setSelectedCategory({
       fileredBy: 'categorieMuzicala',
-      name: categorieMuzicala.name,
+      name: categorieMuzicala,
+      opere: operePerStil,
     });
   };
 
@@ -110,8 +111,11 @@ function App() {
               handleInstrumentSelect={(instrument, operePerInstrument) =>
                 handleInstrumentSelect(instrument, operePerInstrument)
               }
-              handleCategorieMuzicalaSelect={(categorieMuzicala) =>
-                handleCategorieMuzicalaSelect(categorieMuzicala)
+              handleCategorieMuzicalaSelect={(
+                categorieMuzicala,
+                operePerStil
+              ) =>
+                handleCategorieMuzicalaSelect(categorieMuzicala, operePerStil)
               }
             />
           </Route>
