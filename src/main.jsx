@@ -71,10 +71,11 @@ function App() {
     setSelectedOpereCompozitor(opereCompozitor);
   };
 
-  const handleInstrumentSelect = (instrument) => {
+  const handleInstrumentSelect = (instrument, operePerInstrument) => {
     setSelectedCategory({
       fileredBy: 'instrument',
       name: instrument,
+      operePerInstrument,
     });
   };
 
@@ -106,8 +107,8 @@ function App() {
           </Route>
           <Route exact path="/categorii">
             <Categories
-              handleInstrumentSelect={(instrument) =>
-                handleInstrumentSelect(instrument)
+              handleInstrumentSelect={(instrument, operePerInstrument) =>
+                handleInstrumentSelect(instrument, operePerInstrument)
               }
               handleCategorieMuzicalaSelect={(categorieMuzicala) =>
                 handleCategorieMuzicalaSelect(categorieMuzicala)

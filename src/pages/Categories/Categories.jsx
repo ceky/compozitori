@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { getCategoriesInstrumenteJson } from '../../services/CategoriiInstrumente';
 import { getCategoriesMuzicaJson } from '../../services/CategoriiMuzica';
+import { getOperaInstrumentUrl } from '../../services/urls';
+
+import axios from 'axios';
 
 import './Categories.css';
 
@@ -14,11 +17,20 @@ function Categories({ handleInstrumentSelect, handleCategorieMuzicalaSelect }) {
   }, []);
 
   const onClickInstrument = (instrument) => {
-    handleInstrumentSelect(instrument);
+    axios
+      .get(`${getOperaInstrumentUrl}${instrument.toLowerCase()}`)
+      .then((response) => {
+        handleInstrumentSelect(instrument, response.data);
+      });
   };
 
   const onClickCategorieMuzicala = (categorieMuzicala) => {
-    handleCategorieMuzicalaSelect(categorieMuzicala);
+    axios
+      .get(`${getOperaInstrumentUrl}${categorieMuzicala.toLowerCase()}`)
+      .then((response) => {
+        console.log(response);
+      });
+    // handleCategorieMuzicalaSelect(categorieMuzicala);
   };
 
   return (
