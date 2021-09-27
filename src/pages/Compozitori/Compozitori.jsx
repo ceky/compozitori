@@ -1,22 +1,32 @@
 import React, { useState, useEffect } from 'react';
 
 import './Compozitori.css';
-import { getCompozitoriJson } from '../../services/Compozitori';
 import AlphabetFilter from '../../components/alphabetFilter/AlphabetFilter';
+import { getCompozitori } from '../../services/urls';
+
+import axios from 'axios';
 
 function Compozitori({ handleCompozitorSelect }) {
-  const [initialCompozitoriList] = useState(getCompozitoriJson());
+  const [initialCompozitoriList, setInitialCompozitoriList] = useState([]);
   const [filteredCompozitori, setFilteredCompozitori] = useState([]);
   const [activeLetter, setActiveLetter] = useState('a');
+
+  useEffect(() => {
+    axios.get(getCompozitori).then((response) => {
+      setInitialCompozitoriList(response.data);
+    });
+  }, []);
 
   useEffect(() => {
     if (!initialCompozitoriList.length) return;
 
     const filteredList = initialCompozitoriList.filter(
-      (compozitor) => getFirstLetter(compozitor.NumeCompozitor) === activeLetter
+      (compozitor) => getFirstLetter(compozitor) === activeLetter
     );
     setFilteredCompozitori(filteredList);
-  }, [activeLetter]);
+
+    console.log(filteredList);
+  }, [activeLetter, initialCompozitoriList]);
 
   const getFirstLetter = (compozitor) => {
     if (!compozitor) return;
@@ -43,12 +53,9 @@ function Compozitori({ handleCompozitorSelect }) {
 
       <ul className="compozitori-list">
         {filteredCompozitori.map((compozitor, key) => (
-          <li
-            key={key}
-            data-first-letter={getFirstLetter(compozitor.NumeCompozitor)}
-          >
+          <li key={key} data-first-letter={getFirstLetter(compozitor)}>
             <a href="#" onClick={() => onClickCompozitor(compozitor)}>
-              {compozitor.NumeCompozitor}
+              {compozitor}
             </a>
           </li>
         ))}
