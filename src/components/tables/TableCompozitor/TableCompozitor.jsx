@@ -1,7 +1,7 @@
 import React from 'react';
 import './TableCompozitor.css';
 
-function TableCompozitor({ opereCompozitor }) {
+function TableCompozitor({ opere }) {
   return (
     <div className="table-compozitori-container">
       <table>
@@ -14,12 +14,12 @@ function TableCompozitor({ opereCompozitor }) {
           </tr>
         </thead>
         <tbody>
-          {opereCompozitor.map((opera) => (
-            <tr key={opera.id}>
-              <td className="opera-title">{opera.Titlu}</td>
-              <td>{opera.AnulComp}</td>
-              <td>{opera.Stil}</td>
-              <td>{opera.Detalii}</td>
+          {opereCompozitor.map((opera, key) => (
+            <tr key={key}>
+              <td className="opera-title">{opera.titlu}</td>
+              <td>{opera.anComp}</td>
+              <td>{opera.stil}</td>
+              <td>{opera.detalii}</td>
             </tr>
           ))}
         </tbody>

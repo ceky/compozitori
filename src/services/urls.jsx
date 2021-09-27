@@ -2,7 +2,13 @@
 const baseDomain = 'http://3.126.51.235:5000/api/v1/resources';
 
 const getCompozitori = `${baseDomain}/nume`;
+const getCompozitorBio = `${baseDomain}/bioRo?nume=`;
 const getOpereInstrumentUrl = `${baseDomain}/opera_instrument?instrument=`;
 const getOpereStilUrl = `${baseDomain}/opera_stil?stil=`;
 
-export { getCompozitori, getOpereInstrumentUrl, getOpereStilUrl };
+export {
+  getCompozitori,
+  getCompozitorBio,
+  getOpereInstrumentUrl,
+  getOpereStilUrl,
+};

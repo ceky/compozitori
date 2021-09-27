@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import './Compozitori.css';
 import AlphabetFilter from '../../components/alphabetFilter/AlphabetFilter';
-import { getCompozitori } from '../../services/urls';
+import { getCompozitori, getCompozitorBio } from '../../services/urls';
 
 import axios from 'axios';
 
@@ -39,10 +39,9 @@ function Compozitori({ handleCompozitorSelect }) {
   };
 
   const onClickCompozitor = (compozitor) => {
-    const opereCompozitor = initialCompozitoriList.filter(
-      (item) => item.NumeCompozitor === compozitor.NumeCompozitor
-    );
-    handleCompozitorSelect(opereCompozitor);
+    axios.get(`${getCompozitorBio}${compozitor}`).then((response) => {
+      handleCompozitorSelect(response.data);
+    });
   };
 
   return (
