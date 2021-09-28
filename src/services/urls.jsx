@@ -6,6 +6,7 @@ const getCompozitorBio = `${baseDomain}/bioRo?nume=`;
 const getOpereInstrumentUrl = `${baseDomain}/opera_instrument?instrument=`;
 const getOpereStilUrl = `${baseDomain}/opera_stil?stil=`;
 const findUrl = `${baseDomain}/list_findings?keyword=`;
+const getStiluriMuzicaleUrl = `${baseDomain}/stiluri`;
 
 export {
   getCompozitori,
@@ -13,4 +14,5 @@ export {
   getOpereInstrumentUrl,
   getOpereStilUrl,
   findUrl,
+  getStiluriMuzicaleUrl,
 };

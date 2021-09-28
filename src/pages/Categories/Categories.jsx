@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { getCategoriesInstrumenteJson } from '../../services/CategoriiInstrumente';
-import { getCategoriesMuzicaJson } from '../../services/CategoriiMuzica';
-import { getOpereInstrumentUrl, getOpereStilUrl } from '../../services/urls';
+import {
+  getOpereInstrumentUrl,
+  getOpereStilUrl,
+  getStiluriMuzicaleUrl,
+} from '../../services/urls';
 
 import axios from 'axios';
 
@@ -12,7 +15,10 @@ function Categories({ handleInstrumentSelect, handleCategorieMuzicalaSelect }) {
   const [categoriesMuzica, setCategoriesMuzica] = useState([]);
 
   useEffect(() => {
-    setCategoriesMuzica(getCategoriesMuzicaJson());
+    axios.get(`${getStiluriMuzicaleUrl}`).then((response) => {
+      setCategoriesMuzica(response.data);
+    });
+
     setCategoriesInstrumente(getCategoriesInstrumenteJson());
   }, []);
 
