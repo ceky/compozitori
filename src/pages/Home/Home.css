@@ -65,4 +65,8 @@ input::-webkit-search-cancel-button {
   .home-container {
     padding: 0 2em;
   }
+
+  .home-container .main-container .logo {
+    max-width: 276px;
+  }
 }
