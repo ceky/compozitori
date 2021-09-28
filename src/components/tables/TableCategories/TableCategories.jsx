@@ -16,8 +16,8 @@ function TableCategories({ opere }) {
         </thead>
         <tbody>
           {opere &&
-            opere.map((opera) => (
-              <tr>
+            opere.map((opera, key) => (
+              <tr key={key}>
                 <td className="opera-compozitor">{opera.numeCompozitor}</td>
                 <td className="opera-title">{opera.titlu}</td>
                 <td>{opera.anComp}</td>
