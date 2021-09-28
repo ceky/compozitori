@@ -6,9 +6,14 @@ import './CompozitoriDetailed.css';
 function CompozitoriDetailed({ opereCompozitor }) {
   const images = import.meta.globEager('/src/assets/compozitori/*.jpg');
 
+  const opere = [];
+  for (const [key, value] of Object.entries(opereCompozitor)) {
+    opere.push(JSON.parse(value));
+  }
+
   const [compozitor] = useState({
-    numeCompozitor: opereCompozitor[0].numeCompozitor,
-    bio: opereCompozitor[0].bio,
+    numeCompozitor: opere[0].numeCompozitor,
+    bio: opere[0].bio,
     photo: '/src/assets/compozitori/avatar.jpg',
   });
 
@@ -20,7 +25,7 @@ function CompozitoriDetailed({ opereCompozitor }) {
         <p className="description">{compozitor.bio}</p>
       </div>
       <div className="table-container">
-        <TableCompozitor opere={opereCompozitor} />
+        <TableCompozitor opere={opere} />
       </div>
     </div>
   );

@@ -16,15 +16,15 @@ function TableCategories({ opere }) {
         </thead>
         <tbody>
           {opere &&
-            opere.map((opera) => {
+            opere.map((opera) => (
               <tr>
                 <td className="opera-compozitor">{opera.numeCompozitor}</td>
                 <td className="opera-title">{opera.titlu}</td>
                 <td>{opera.anComp}</td>
                 <td>{opera.stil}</td>
                 <td>{opera.details}</td>
-              </tr>;
-            })}
+              </tr>
+            ))}
         </tbody>
       </table>
     </div>

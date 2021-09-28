@@ -4,7 +4,6 @@ import './Home.css';
 import '../../components/common.css';
 import logo from '../../assets/Logo_blackred.png';
 import TableSearch from '../../components/tables/TableSearch/TableSearch';
-import { getCompozitoriJson } from '../../services/Compozitori';
 import { findUrl } from '../../services/urls';
 
 import axios from 'axios';
@@ -17,7 +16,11 @@ function Home() {
     axios
       .get(`${findUrl}${event.target.value.toLowerCase()}`)
       .then((response) => {
-        setCompozitoriList(response.data);
+        const opere = [];
+        for (const [key, value] of Object.entries(response.data)) {
+          opere.push(JSON.parse(value));
+        }
+        setCompozitoriList(opere);
       });
     setSearchValue(event.target.value.toLowerCase());
   }

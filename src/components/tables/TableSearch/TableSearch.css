@@ -16,7 +16,7 @@ table {
 .table-search-container tr td {
   text-align: left;
   border-bottom: 1px solid rgba(0 0 0 / 60%);
-  white-space: nowrap;
+  white-space: break-spaces;
   text-overflow: ellipsis;
   overflow: hidden;
 }
@@ -36,6 +36,7 @@ table {
 
 .table-search-container .opera-stil {
   max-width: 250px;
+  padding-right: 1rem;
 }
 .table-search-container .opera-detalii {
   min-width: 300px;

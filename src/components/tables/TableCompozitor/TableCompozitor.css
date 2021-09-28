@@ -12,7 +12,7 @@ table {
 .table-compozitori-container tr td {
   text-align: left;
   border-bottom: 1px solid rgba(255 255 255 / 60%);
-  white-space: nowrap;
+  white-space: break-spaces;
   text-overflow: ellipsis;
   overflow: hidden;
 }
@@ -33,6 +33,7 @@ table {
 
 .table-compozitori-container .opera-stil {
   max-width: 250px;
+  padding-right: 1rem;
 }
 .table-compozitori-container .opera-detalii {
   min-width: 300px;

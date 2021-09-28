@@ -14,12 +14,12 @@ function TableCompozitor({ opere }) {
           </tr>
         </thead>
         <tbody>
-          {opereCompozitor.map((opera, key) => (
+          {opere.map((opera, key) => (
             <tr key={key}>
               <td className="opera-title">{opera.titlu}</td>
               <td>{opera.anComp}</td>
               <td>{opera.stil}</td>
-              <td>{opera.detalii}</td>
+              <td>{opera.details}</td>
             </tr>
           ))}
         </tbody>

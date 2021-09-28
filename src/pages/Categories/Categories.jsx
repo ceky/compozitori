@@ -20,13 +20,21 @@ function Categories({ handleInstrumentSelect, handleCategorieMuzicalaSelect }) {
     axios
       .get(`${getOpereInstrumentUrl}${instrument.toLowerCase()}`)
       .then((response) => {
-        handleInstrumentSelect(instrument, response.data);
+        const opere = [];
+        for (const [key, value] of Object.entries(response.data)) {
+          opere.push(JSON.parse(value));
+        }
+        handleInstrumentSelect(instrument, opere);
       });
   };
 
   const onClickCategorieMuzicala = (categorieMuzicala) => {
     axios.get(`${getOpereStilUrl}${categorieMuzicala}`).then((response) => {
-      handleCategorieMuzicalaSelect(categorieMuzicala, response.data);
+      const opere = [];
+      for (const [key, value] of Object.entries(response.data)) {
+        opere.push(JSON.parse(value));
+      }
+      handleCategorieMuzicalaSelect(categorieMuzicala, opere);
     });
   };
 
