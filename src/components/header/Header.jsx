@@ -3,7 +3,6 @@ import { useHistory, useLocation } from 'react-router-dom';
 import './Header.css';
 import logo from '../../assets/Logo_blackred.png';
 import logo2 from '../../assets/Logo_blackwhite.png';
-import classNames from 'classnames';
 
 function Header({ selectedLanguage }) {
   const history = useHistory();
@@ -27,13 +26,6 @@ function Header({ selectedLanguage }) {
     );
   };
 
-  const isSecondaryLogo = () => {
-    return (
-      location.pathname === '/categorii' ||
-      location.pathname === '/category-detailed'
-    );
-  };
-
   return (
     <header>
       <div
@@ -43,7 +35,7 @@ function Header({ selectedLanguage }) {
       >
         {isExtended && (
           <div className="header-extended">
-            {isSecondaryLogo() ? (
+            {!isSecondaryMenu() ? (
               <img
                 src={logo2}
                 className="logo"

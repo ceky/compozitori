@@ -6,6 +6,11 @@ table {
   border-collapse: collapse;
   font-size: 0.9em;
   width: 100%;
+  margin-bottom: 3em;
+}
+
+table thead {
+  font-size: 1.3em;
 }
 
 .table-search-container tr th {
@@ -26,7 +31,7 @@ table {
 }
 
 .table-search-container .opera-compozitor {
-  padding-left: 7.5em;
+  padding-left: 110px;
   max-width: 400px;
 }
 

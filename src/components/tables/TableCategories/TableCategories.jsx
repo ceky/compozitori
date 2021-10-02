@@ -12,6 +12,7 @@ function TableCategories({ opere }) {
             <th className="opera-an">Anul Compozitiei</th>
             <th className="opera-stil">Stil</th>
             <th className="opera-detalii">Detalii</th>
+            <th className="opera-detalii">Versuri</th>
           </tr>
         </thead>
         <tbody>
@@ -23,6 +24,7 @@ function TableCategories({ opere }) {
                 <td>{opera.anComp}</td>
                 <td>{opera.stil}</td>
                 <td>{opera.details}</td>
+                <td>{opera.versuri}</td>
               </tr>
             ))}
         </tbody>

@@ -2,6 +2,11 @@ table {
   border-collapse: collapse;
   font-size: 0.9em;
   width: 100%;
+  margin-bottom: 3em;
+}
+
+table thead {
+  font-size: 1.3em;
 }
 
 .table-categories-container tr th {
@@ -23,7 +28,7 @@ table {
 
 .table-categories-container .opera-compozitor {
   max-width: 300px;
-  padding-left: 7.5em;
+  padding-left: 110px;
 }
 
 .table-categories-container .opera-title {

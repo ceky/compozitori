@@ -41,7 +41,7 @@ function App() {
     'green-background':
       selectedPage === '/compozitori' ||
       selectedPage === '/compozitori-detailed',
-    'red-background':
+    'blue-background':
       selectedPage === '/categorii' || selectedPage === '/category-detailed',
     'white-background':
       selectedPage === '/' ||
