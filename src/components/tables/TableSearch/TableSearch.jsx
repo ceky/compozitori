@@ -10,6 +10,7 @@ function TableSearch({ compozitori }) {
             <tr>
               <th className="opera-compozitor">Compozitor</th>
               <th className="opera-title">Titlu</th>
+              <th className="opera-title">An</th>
               <th className="opera-stil">Stil</th>
               <th className="opera-detalii">Detalii</th>
             </tr>
@@ -19,6 +20,7 @@ function TableSearch({ compozitori }) {
               <tr key={key}>
                 <td className="opera-compozitor">{opera.numeCompozitor}</td>
                 <td>{opera.titlu}</td>
+                <td>{opera.anComp}</td>
                 <td>{opera.stil}</td>
                 <td>{opera.details}</td>
               </tr>

@@ -13,7 +13,7 @@ function CompozitoriDetailed({ opereCompozitor }) {
 
   const [compozitor] = useState({
     numeCompozitor: opere[0].numeCompozitor,
-    bio: opere[0].bio,
+    bioRo: opere[0].bioRo,
     photo: '/src/assets/compozitori/avatar.jpg',
   });
 
@@ -22,7 +22,7 @@ function CompozitoriDetailed({ opereCompozitor }) {
       <div className="compozitor-details-container">
         <h1 className="name">{compozitor.numeCompozitor}</h1>
         <img className="avatar" src={images[compozitor.photo].default} />
-        <p className="description">{compozitor.bio}</p>
+        <p className="description">{compozitor.bioRo}</p>
       </div>
       <div className="table-container">
         <TableCompozitor opere={opere} />
