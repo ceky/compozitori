@@ -1,3 +1,7 @@
 .contact-container {
   margin: 2em 7em;
 }
+
+.contact-container a {
+  color: rgb(4, 4, 173);
+}

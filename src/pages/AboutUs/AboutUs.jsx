@@ -3,25 +3,40 @@ import React from 'react';
 import './AboutUs.css';
 
 function AboutUs() {
+  const images = import.meta.globEager('/src/assets/Corina.jpg');
+
   return (
     <div className="about-us-container">
+      <div className="image-container">
+        <img
+          className="avatar"
+          src={images['/src/assets/Corina.jpg'].default}
+        />
+        <p>credit: Andreea Retinschi</p>
+      </div>
+
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis neque
-        suscipit, dapibus nibh at, consectetur nulla. Sed tincidunt lectus ac
-        semper gravida. Fusce vulputate risus ac sapien tincidunt, at commodo
-        orci elementum. Nunc pellentesque tortor sit amet urna vehicula luctus.{' '}
+        Inițiatoarea acestui proiect este Corina Ciuplea - Țurcan, editor și
+        tehnoredactor de partituri muzicale.{' '}
       </p>
 
-      <i>
-        Praesent maximus justo ac convallis pretium. Aliquam dignissim eros
-        ante, vel accumsan arcu consequat at. Pellentesque consectetur tellus ut
-        finibus rutrum. Curabitur dignissim faucibus sapien a rhoncus. Nullam ex
-        enim, egestas ac risus vitae, porttitor pretium est. Donec at semper
-        dui. Quisque sit amet dui vitae leo ullamcorper viverra.{' '}
-      </i>
+      <p>
+        În prezent este editor colaborator pentru Orchestrele Radio România,
+        European FilmPhilharmonic Institute din Berlin și colaboreaza cu
+        compozitori, instituții culturale și edituri din Romania și Germania. In
+        ultimii ani a tehnoredactat și editat peste 40 de lucrări de muzică
+        clasică romaneasca, atât pentru compozitori români independenți cât și
+        pentru instituții sau orchestre de stat.{' '}
+      </p>
 
       <p>
-        Vivamus sollicitudin ornare elit fermentum faucibus. Nullam in ante sem.
+        Experiența ei de lucru cu manuscrise vechi și muzică contemporană
+        dobândită pe plan european au dus la colaborări importante cu impact
+        asupra patrimoniului de muzică clasică românească. Din această nevoie de
+        centralizare în premieră în format digital a miilor de lucrări
+        românești, indexate și catalogate prin intermediul unui motor de
+        căutare, Corina Ciuplea - Țurcan, alaturi de echipa ei formată din
+        muzicieni profesioniști, a pus bazele proiectului Catalog Muzical.{' '}
       </p>
     </div>
   );

@@ -51,11 +51,12 @@ function Header({ selectedLanguage }) {
               />
             )}
 
-            <p className="header-description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-              pulvinar et turpis vitae bibendum. Class aptent taciti sociosqu
-              ad.
-            </p>
+            <div className="header-description">
+              <p className="bold-desc">Acum sunt indexate 12570de titluri.</p>
+              <p className="italic-desc">
+                Aceasta baza de date este in continua actualizare.
+              </p>
+            </div>
           </div>
         )}
         <menu>
@@ -83,20 +84,12 @@ function Header({ selectedLanguage }) {
             <li
               className={location.pathname === '/about-us' ? 'activeRoute' : ''}
             >
-              <a href="/about-us">DESPRE NOI</a>
+              <a href="/about-us">DESPRE PROIECT</a>
             </li>
             <li
               className={location.pathname === '/contact' ? 'activeRoute' : ''}
             >
               <a href="/contact">CONTACT</a>
-            </li>
-          </ul>
-          <ul className="languages-container">
-            <li className={selectedLanguage === 'ro' ? 'activeRoute' : ''}>
-              <a href="#">RO</a>
-            </li>
-            <li className={selectedLanguage === 'en' ? 'activeRoute' : ''}>
-              <a href="#">EN</a>
             </li>
           </ul>
         </menu>

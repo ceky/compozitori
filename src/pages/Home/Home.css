@@ -27,11 +27,20 @@
 .home-container .main-description {
   margin: 0;
   margin-bottom: 1em;
+  text-align: center;
+}
+
+.strong {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
 }
 
 .home-container input {
   outline: none;
-  margin-top: 2em;
+  margin-top: 1em;
 }
 .home-container input[type='search'] {
   -webkit-appearance: textfield;

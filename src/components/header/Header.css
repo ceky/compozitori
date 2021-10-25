@@ -24,6 +24,17 @@ header .logo {
 .header-description {
   width: 390px;
   text-align: right;
+  margin-top: 2em;
+}
+
+.header-description .bold-desc {
+  font-weight: bold;
+  margin: 0;
+}
+
+.header-description .italic-desc {
+  font-style: italic;
+  margin: 0;
 }
 
 menu {
