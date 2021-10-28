@@ -5,10 +5,7 @@ import './CategoryDetailed.css';
 
 function CategoryDetailed({ category }) {
   return (
-    <div>
-      <div className="category-details-container">
-        <p className="category-name">{category.name}</p>
-      </div>
+    <div className="main-container-category">
       <TableCategories opere={category.opere} />
     </div>
   );

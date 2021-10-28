@@ -39,11 +39,6 @@ table thead {
   max-width: 400px;
 }
 
-.table-search-container .opera-stil {
-  max-width: 250px;
-  padding-right: 1rem;
-}
-.table-search-container .opera-detalii {
-  min-width: 300px;
+.table-search-container .opera-editura {
   padding-right: 7.5em;
 }

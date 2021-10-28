@@ -26,7 +26,7 @@ table thead {
   border-bottom: none;
 }
 
-.table-compozitori-container .opera-title {
+.table-compozitori-container .opera-compozitor {
   color: white;
   padding-left: 110px;
   max-width: 500px;
@@ -36,11 +36,6 @@ table thead {
   max-width: 150px;
 }
 
-.table-compozitori-container .opera-stil {
-  max-width: 250px;
-  padding-right: 1rem;
-}
-.table-compozitori-container .opera-detalii {
-  min-width: 300px;
+.table-compozitori-container .opera-editura {
   padding-right: 7.5em;
 }
