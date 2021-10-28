@@ -8,7 +8,6 @@ function AlphabetFilter({ handleLetterChange }) {
   useEffect(() => {
     let alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
 
-    console.log(alphabet);
     setAlphabetList(alphabet);
   }, []);
 

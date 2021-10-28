@@ -16,8 +16,9 @@ function AboutUs() {
       </div>
 
       <p>
-        Inițiatoarea acestui proiect este Corina Ciuplea - Țurcan, editor și
-        tehnoredactor de partituri muzicale.{' '}
+        Inițiatoarea acestui proiect este{' '}
+        <strong>Corina Ciuplea - Țurcan</strong>, editor și tehnoredactor de
+        partituri muzicale.{' '}
       </p>
 
       <p>

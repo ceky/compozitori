@@ -24,8 +24,6 @@ function Compozitori({ handleCompozitorSelect }) {
       (compozitor) => getFirstLetter(compozitor) === activeLetter
     );
     setFilteredCompozitori(filteredList);
-
-    console.log(filteredList);
   }, [activeLetter, initialCompozitoriList]);
 
   const getFirstLetter = (compozitor) => {

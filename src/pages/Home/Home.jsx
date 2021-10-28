@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import './Home.css';
 import '../../components/common.css';
@@ -11,18 +11,26 @@ import axios from 'axios';
 function Home() {
   const [searchValue, setSearchValue] = useState('');
   const [compozitoriList, setCompozitoriList] = useState([]);
+  const [delayTimer, setDelayTimer] = useState(null);
 
   function onChangeSearch(event) {
-    axios
-      .get(`${findUrl}${event.target.value.toLowerCase()}`)
-      .then((response) => {
-        const opere = [];
-        for (const [key, value] of Object.entries(response.data)) {
-          opere.push(JSON.parse(value));
-        }
-        setCompozitoriList(opere);
-      });
     setSearchValue(event.target.value.toLowerCase());
+
+    clearTimeout(delayTimer);
+
+    setDelayTimer(
+      setTimeout(function () {
+        axios
+          .get(`${findUrl}${event.target.value.toLowerCase()}`)
+          .then((response) => {
+            const opere = [];
+            for (const [key, value] of Object.entries(response.data)) {
+              opere.push(JSON.parse(value));
+            }
+            setCompozitoriList(opere);
+          });
+      }, 400)
+    );
   }
 
   return (

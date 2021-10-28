@@ -78,11 +78,16 @@ function App() {
     });
   };
 
-  const handleCategorieMuzicalaSelect = (categorieMuzicala, operePerStil) => {
+  const handleCategorieMuzicalaSelect = (
+    categorieMuzicala,
+    operePerStil,
+    subcategorii
+  ) => {
     setSelectedCategory({
       fileredBy: 'categorieMuzicala',
       name: categorieMuzicala,
       opere: operePerStil,
+      subcategorii,
     });
   };
 
@@ -112,9 +117,14 @@ function App() {
               }
               handleCategorieMuzicalaSelect={(
                 categorieMuzicala,
-                operePerStil
+                operePerStil,
+                subcategorii
               ) =>
-                handleCategorieMuzicalaSelect(categorieMuzicala, operePerStil)
+                handleCategorieMuzicalaSelect(
+                  categorieMuzicala,
+                  operePerStil,
+                  subcategorii
+                )
               }
             />
           </Route>

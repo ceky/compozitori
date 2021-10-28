@@ -1,0 +1,23 @@
+.music-subcategories-container {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+
+  margin-left: 110px;
+  margin-bottom: 2em;
+}
+
+.music-subcategories-container li {
+  font-size: 1.2em;
+  margin-right: 1.2em;
+}
+
+.music-subcategories-container li a {
+  color: white;
+}
+
+.music-subcategories-container li a.active {
+  font-weight: 700;
+}
