@@ -1,20 +1,7 @@
 footer {
   padding: 0.8em;
   border-top: 1px solid var(--text-color);
-}
 
-.footer-container {
-  list-style-type: none;
   display: flex;
-  justify-content: space-evenly;
-  margin: 0;
-  padding-left: 0;
-}
-
-.footer-container li {
-  margin-right: 1em;
-}
-
-.footer-container a {
-  color: var(--text-color);
+  justify-content: center;
 }

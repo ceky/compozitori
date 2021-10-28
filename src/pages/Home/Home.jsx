@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import './Home.css';
 import '../../components/common.css';
-import logo from '../../assets/Logo_blackred.png';
+import logo from '../../assets/logo_landing.png';
 import TableSearch from '../../components/tables/TableSearch/TableSearch';
 import { findUrl } from '../../services/urls';
 
@@ -31,13 +31,7 @@ function Home() {
         <div className="main-container">
           <img src={logo} className="logo" alt="Logo" />
         </div>
-        <p className="main-description">
-          <p className="strong">Indexul digital al muzicii clasice româești</p>
-
-          <p className="italic">
-            Aceasta baza de date este in continua actualizare
-          </p>
-        </p>
+        <p className="subtitle">Indexul digital al muzicii clasice românești</p>
 
         <input
           className="search-input"
@@ -46,6 +40,25 @@ function Home() {
           type="search"
           value={searchValue}
         />
+
+        <p className="main-description">
+          Proiectul Catalog Muzical isi propune digitalizarea si agregarea
+          informatiilor despre lucrarile compozitorilor romani intr-un singur
+          loc, care sa fie accesibil tuturor, la un click distanta. O platforma
+          online care sa inglobeze detaliile esentiale despre o lucrare muzicala
+          ( anul compozitie, stilul muzical, intrumentele folosite, unde este
+          disponibila etc.) astfel incat sa fie usor de gasit de catre cei
+          interesati. Catalogmuzical.ro vine in intampinarea nevoilor tuturor
+          profesionistilor din muzica clasica de informatii rapide, concise si
+          utile. Platforma va functiona ca un punct de referinta pentru
+          identificarea si localizarea lucrarilor muzicale apartinand
+          compozitorilor romani. Cu toate ca exista informatii despre fiecare
+          compozitor roman in parte, in diverse carti de istorie sau carti
+          biografice, nu exista un loc care sa centralizeze o lista a lucrarilor
+          compuse de toti compozitorii de muzica clasica din Romania. Sunt
+          cateva carti vechi si dictionare care catalogheaza lucrarile acestora,
+          insa informatiile sunt incomplete, neactualizate si disparate.
+        </p>
       </main>
       <TableSearch compozitori={compozitoriList} />
     </div>

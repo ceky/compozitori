@@ -2,16 +2,14 @@ import React from 'react';
 import './Footer.css';
 
 function Footer() {
+  const images = import.meta.globEager('/src/assets/logo_footer.png');
+
   return (
     <footer>
-      <ul className="footer-container">
-        <li>
-          <a href="#">AFCN LOGO</a>
-        </li>
-        <li>
-          <a href="#">ALTI PARTENERI LOGO</a>
-        </li>
-      </ul>
+      <img
+        className="avatar"
+        src={images['/src/assets/logo_footer.png'].default}
+      />
     </footer>
   );
 }

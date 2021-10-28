@@ -30,7 +30,6 @@ ReactDOM.render(
 );
 
 function App() {
-  const [selectedLanguage] = useState('ro');
   const [selectedPage, setSelectedPage] = useState('/');
   const [selectedOpereCompozitor, setSelectedOpereCompozitor] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -89,7 +88,7 @@ function App() {
 
   return (
     <div className={bgColorClass}>
-      <Header selectedLanguage={selectedLanguage} />
+      <Header />
 
       <div className="page-container">
         <Switch>

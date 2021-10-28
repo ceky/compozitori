@@ -4,7 +4,7 @@ import './Header.css';
 import logo from '../../assets/Logo_blackred.png';
 import logo2 from '../../assets/Logo_blackwhite.png';
 
-function Header({ selectedLanguage }) {
+function Header() {
   const history = useHistory();
   const location = useLocation();
   const [isExtended, setIsExtended] = useState(false);
@@ -12,6 +12,10 @@ function Header({ selectedLanguage }) {
   useEffect(() => {
     setIsExtended(location.pathname !== '/');
   }, [location]);
+
+  const getMenuClassNames = () => {
+    return 'menu';
+  };
 
   function handleClick() {
     history.push('/');
@@ -50,16 +54,9 @@ function Header({ selectedLanguage }) {
                 onClick={handleClick}
               />
             )}
-
-            <div className="header-description">
-              <p className="bold-desc">Acum sunt indexate 12570de titluri.</p>
-              <p className="italic-desc">
-                Aceasta baza de date este in continua actualizare.
-              </p>
-            </div>
           </div>
         )}
-        <menu>
+        <menu className={`${location.pathname === '/' ? 'menu-home' : ''}`}>
           <ul className="header-menu-container">
             <li
               className={
@@ -92,6 +89,12 @@ function Header({ selectedLanguage }) {
               <a href="/contact">CONTACT</a>
             </li>
           </ul>
+
+          <div className="header-description">
+            <p className="italic-desc">
+              Aceasta baza de date este in continua actualizare.
+            </p>
+          </div>
         </menu>
       </div>
     </header>
