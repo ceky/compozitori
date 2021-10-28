@@ -7,10 +7,10 @@ function TableCompozitor({ opere }) {
       <table>
         <thead>
           <tr>
-            <th className="opera-title">Titlu</th>
-            <th className="opera-an">Anul Compozitiei</th>
-            <th className="opera-stil">Stil</th>
-            <th className="opera-detalii">Detalii</th>
+            <th className="opera-title"></th>
+            <th className="opera-an"></th>
+            <th className="opera-stil"></th>
+            <th className="opera-detalii"></th>
           </tr>
         </thead>
         <tbody>
