@@ -27,8 +27,10 @@ table thead {
 }
 
 .table-categories-container .opera-compozitor {
-  max-width: 300px;
   padding-left: 110px;
+  padding-right: 10px;
+  min-width: 120px;
+  max-width: 400px;
 }
 
 .table-categories-container .opera-title {

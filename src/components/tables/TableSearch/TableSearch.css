@@ -32,6 +32,8 @@ table thead {
 
 .table-search-container .opera-compozitor {
   padding-left: 110px;
+  padding-right: 10px;
+  min-width: 120px;
   max-width: 400px;
 }
 
