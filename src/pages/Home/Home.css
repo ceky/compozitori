@@ -27,9 +27,9 @@
 
 .home-container .subtitle {
   margin: 0;
-  position: absolute;
-  top: 163px;
-  right: 135px;
+  position: relative;
+  top: -38px;
+  right: -267px;
 }
 
 .main-description {
