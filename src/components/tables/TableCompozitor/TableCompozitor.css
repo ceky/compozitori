@@ -26,10 +26,8 @@ table thead {
   border-bottom: none;
 }
 
-.table-compozitori-container .opera-compozitor {
-  color: white;
+.table-compozitori-container .opera-display {
   padding-left: 110px;
-  max-width: 500px;
 }
 
 .table-compozitori-container .opera-an {

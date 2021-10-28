@@ -7,7 +7,6 @@ function TableCompozitor({ opere }) {
       <table>
         <thead>
           <tr>
-            <th className="opera-compozitor"></th>
             <th className="opera-display"></th>
             <th className="opera-title"></th>
             <th className="opera-titleEn"></th>
@@ -20,8 +19,7 @@ function TableCompozitor({ opere }) {
         <tbody>
           {opere.map((opera, key) => (
             <tr key={key}>
-              <td className="opera-compozitor">{opera.numeCompozitor}</td>
-              <td>{opera.display}</td>
+              <td className="opera-display">{opera.display}</td>
               <td>{opera.titlu}</td>
               <td>{opera.titluEN}</td>
               <td>{opera.op}</td>

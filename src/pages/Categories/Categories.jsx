@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { getCategoriesInstrumenteJson } from '../../services/CategoriiInstrumente';
+import { getCategoriesMuzicaJson } from '../../services/CategoriiMuzica';
 import {
   getOpereInstrumentUrl,
   getOpereStilUrl,
@@ -15,11 +16,8 @@ function Categories({ handleInstrumentSelect, handleCategorieMuzicalaSelect }) {
   const [categoriesMuzica, setCategoriesMuzica] = useState([]);
 
   useEffect(() => {
-    axios.get(`${getStiluriMuzicaleUrl}`).then((response) => {
-      setCategoriesMuzica(response.data);
-    });
-
     setCategoriesInstrumente(getCategoriesInstrumenteJson());
+    setCategoriesMuzica(getCategoriesMuzicaJson());
   }, []);
 
   const onClickInstrument = (instrument) => {
@@ -48,6 +46,35 @@ function Categories({ handleInstrumentSelect, handleCategorieMuzicalaSelect }) {
     return finalResult;
   };
 
+  const capitalize = (text) => {
+    return text[0].toUpperCase() + text.substring(1);
+  };
+
+  /**
+   * If it has `stil` call /opera_stil
+   * Otherwise call /opera_instrument
+   */
+  const renderCategoriesWithoutParent = (muzica) => {
+    if (muzica.name === 'altele') {
+      return (
+        <li>
+          <a href="#" onClick={() => onClickInstrument('altele')}>
+            Altele
+          </a>
+        </li>
+      );
+    }
+    return muzica.items.map((category, key) => {
+      return (
+        <li key={key}>
+          <a href="#" onClick={() => onClickInstrument(category)}>
+            {capitalize(category)}
+          </a>
+        </li>
+      );
+    });
+  };
+
   return (
     <div className="categories-container">
       <ul className="column instrumente-container">
@@ -60,13 +87,17 @@ function Categories({ handleInstrumentSelect, handleCategorieMuzicalaSelect }) {
         ))}
       </ul>
       <ul className="column muzica-container">
-        {categoriesMuzica.map((muzica, key) => (
-          <li key={key}>
-            <a href="#" onClick={() => onClickCategorieMuzicala(muzica)}>
-              {muzica}
-            </a>
-          </li>
-        ))}
+        {categoriesMuzica.map((muzica, key) =>
+          muzica.stil.length ? (
+            <li key={key}>
+              <a href="#" onClick={() => onClickCategorieMuzicala(muzica.stil)}>
+                {muzica.stil}
+              </a>
+            </li>
+          ) : (
+            renderCategoriesWithoutParent(muzica)
+          )
+        )}
       </ul>
     </div>
   );
