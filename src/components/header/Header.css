@@ -47,7 +47,32 @@ menu {
 }
 
 .menu-home {
-  margin-top: 2em;
+  margin-top: 0;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  width: 100%;
+}
+
+.logo-container .logo-landing {
+  max-width: 976px;
+}
+
+.subtitle {
+  position: relative;
+  top: -42px;
+  right: -739px;
+  margin: 0;
+  width: fit-content;
+  font-size: 0.9em;
 }
 
 .header-menu-container {

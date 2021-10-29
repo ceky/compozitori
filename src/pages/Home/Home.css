@@ -7,31 +7,6 @@
   position: relative;
 }
 
-.home-container .main-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0;
-  width: 100%;
-}
-
-.home-container .main-container .logo {
-  max-width: 976px;
-}
-
-.home-container .main-container h1 {
-  font-size: 4em;
-  font-family: 'Big Caslon', sans-serif;
-  font-weight: 400;
-}
-
-.home-container .subtitle {
-  margin: 0;
-  position: relative;
-  top: -38px;
-  right: -267px;
-}
-
 .main-description {
   max-width: 1079px;
   padding-right: 123px;
@@ -41,7 +16,10 @@
 
 .home-container input {
   outline: none;
-  margin-top: 3em;
+}
+
+.home-container p {
+  font-size: 0.9em;
 }
 
 .home-container input[type='search'] {

@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 import './Home.css';
 import '../../components/common.css';
-import logo from '../../assets/logo_landing.png';
+
 import TableSearch from '../../components/tables/TableSearch/TableSearch';
 import { findUrl } from '../../services/urls';
 
@@ -15,6 +15,11 @@ function Home() {
 
   function onChangeSearch(event) {
     setSearchValue(event.target.value.toLowerCase());
+
+    if (!event.target.value.length) {
+      setCompozitoriList([]);
+      return;
+    }
 
     clearTimeout(delayTimer);
 
@@ -29,18 +34,14 @@ function Home() {
             }
             setCompozitoriList(opere);
           });
-      }, 400)
+      }, 300)
     );
   }
 
   return (
     <div>
       <main className="home-container">
-        <div className="main-container">
-          <img src={logo} className="logo" alt="Logo" />
-        </div>
-        <p className="subtitle">Indexul digital al muzicii clasice românești</p>
-
+        <p>Această bază de date este in continuă actualizare.</p>
         <input
           className="search-input"
           onChange={onChangeSearch}
@@ -49,6 +50,7 @@ function Home() {
           value={searchValue}
         />
       </main>
+
       <TableSearch compozitori={compozitoriList} />
     </div>
   );

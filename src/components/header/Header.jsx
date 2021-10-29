@@ -13,10 +13,6 @@ function Header() {
     setIsExtended(location.pathname !== '/');
   }, [location]);
 
-  const getMenuClassNames = () => {
-    return 'menu';
-  };
-
   function handleClick() {
     history.push('/');
   }
@@ -56,7 +52,24 @@ function Header() {
             )}
           </div>
         )}
-        <menu className={`${location.pathname === '/' ? 'menu-home' : ''}`}>
+
+        {!isExtended && (
+          <div>
+            <div className="logo-container">
+              <img src={logo} className="logo-landing" alt="Logo" />
+            </div>
+
+            <p className="subtitle">
+              Indexul digital al muzicii clasice românești
+            </p>
+          </div>
+        )}
+
+        <menu
+          className={`${location.pathname === '/' ? 'menu-home' : ''} ${
+            !isExtended ? 'center' : ''
+          }`}
+        >
           <ul className="header-menu-container">
             <li
               className={
@@ -90,11 +103,13 @@ function Header() {
             </li>
           </ul>
 
-          <div className="header-description">
-            <p className="italic-desc">
-              Această bază de date este in continuă actualizare.
-            </p>
-          </div>
+          {isExtended && (
+            <div className="header-description">
+              <p className="italic-desc">
+                Această bază de date este in continuă actualizare.
+              </p>
+            </div>
+          )}
         </menu>
       </div>
     </header>
