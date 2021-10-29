@@ -17,7 +17,7 @@ function CategoryDetailed({ category }) {
 
   return (
     <div className="main-container-category">
-      {category.subcategorii && category.subcategorii.length && (
+      {!!category.subcategorii && !!category.subcategorii.length && (
         <MusicSubcategories
           mainCategory={category}
           subcategories={category.subcategorii}

@@ -8,14 +8,13 @@ function TableSearch({ compozitori }) {
         <table>
           <thead>
             <tr>
-              <th className="opera-compozitor"></th>
-              <th className="opera-display"></th>
-              <th className="opera-title"></th>
+              <th className="opera-compozitor">Nume</th>
+              <th className="opera-display">Categorie</th>
+              <th className="opera-title">Titlu</th>
               <th className="opera-titleEn"></th>
-              <th className="opera-op"></th>
-              <th className="opera-anComp"></th>
-              <th className="opera-instrumentatii"></th>
-              <th className="opera-editura"></th>
+              <th className="opera-op">Op.</th>
+              <th className="opera-anComp">An comp.</th>
+              <th className="opera-instrumentatii">Instrumentație</th>
             </tr>
           </thead>
           <tbody>

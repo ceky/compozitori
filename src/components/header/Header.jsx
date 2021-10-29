@@ -92,7 +92,7 @@ function Header() {
 
           <div className="header-description">
             <p className="italic-desc">
-              Aceasta baza de date este in continua actualizare.
+              Această bază de date este in continuă actualizare.
             </p>
           </div>
         </menu>

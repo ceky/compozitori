@@ -17,6 +17,10 @@ function Categories({ handleInstrumentSelect, handleCategorieMuzicalaSelect }) {
   }, []);
 
   const onClickInstrument = (instrument) => {
+    if (instrument === 'alteInstrumente') {
+      instrument = 'altele';
+    }
+
     axios.get(`${getOpereInstrumentUrl}${instrument}`).then((response) => {
       const opere = [];
       for (const [key, value] of Object.entries(response.data)) {
@@ -26,30 +30,26 @@ function Categories({ handleInstrumentSelect, handleCategorieMuzicalaSelect }) {
     });
   };
 
-  const onClickCategorieMuzicala = (categorieMuzicala, subcategorii) => {
+  const onClickCategorieMuzicala = (categorieMuzicala, subcategorii = []) => {
     axios.get(`${getOpereStilUrl}${categorieMuzicala}`).then((response) => {
       const opere = [];
       for (const [key, value] of Object.entries(response.data)) {
         opere.push(JSON.parse(value));
       }
 
-      subcategorii.unshift('Toate');
+      if (subcategorii.length) {
+        subcategorii.unshift('Toate');
 
-      subcategorii = subcategorii.map((subcategory) => {
-        return {
-          selected: subcategory === 'Toate' ? true : false,
-          name: subcategory,
-        };
-      });
+        subcategorii = subcategorii.map((subcategory) => {
+          return {
+            selected: subcategory === 'Toate' ? true : false,
+            name: subcategory,
+          };
+        });
+      }
 
       handleCategorieMuzicalaSelect(categorieMuzicala, opere, subcategorii);
     });
-  };
-
-  const camelCaseToSentance = (text) => {
-    const result = text.replace(/([A-Z])/g, ' $1');
-    const finalResult = result.charAt(0).toUpperCase() + result.slice(1);
-    return finalResult;
   };
 
   const capitalize = (text) => {
@@ -61,19 +61,10 @@ function Categories({ handleInstrumentSelect, handleCategorieMuzicalaSelect }) {
    * Otherwise call /opera_instrument
    */
   const renderCategoriesWithoutParent = (muzica) => {
-    if (muzica.name === 'altele') {
-      return (
-        <li>
-          <a href="#" onClick={() => onClickInstrument('altele')}>
-            Altele
-          </a>
-        </li>
-      );
-    }
     return muzica.items.map((category, key) => {
       return (
         <li key={key}>
-          <a href="#" onClick={() => onClickInstrument(category)}>
+          <a href="#" onClick={() => onClickCategorieMuzicala(category)}>
             {capitalize(category)}
           </a>
         </li>
@@ -86,8 +77,8 @@ function Categories({ handleInstrumentSelect, handleCategorieMuzicalaSelect }) {
       <ul className="column instrumente-container">
         {categoriesInstrumente.map((instrument, key) => (
           <li key={key}>
-            <a href="#" onClick={() => onClickInstrument(instrument)}>
-              {camelCaseToSentance(instrument)}
+            <a href="#" onClick={() => onClickInstrument(instrument.value)}>
+              {instrument.display}
             </a>
           </li>
         ))}

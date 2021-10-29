@@ -39,6 +39,25 @@ function AboutUs() {
         căutare, Corina Ciuplea - Țurcan, alaturi de echipa ei formată din
         muzicieni profesioniști, a pus bazele proiectului Catalog Muzical.{' '}
       </p>
+
+      <p>
+        Proiectul Catalog Muzical isi propune digitalizarea si agregarea
+        informatiilor despre lucrarile compozitorilor romani intr-un singur loc,
+        care sa fie accesibil tuturor, la un click distanta. O platforma online
+        care sa inglobeze detaliile esentiale despre o lucrare muzicala ( anul
+        compozitie, stilul muzical, intrumentele folosite, unde este disponibila
+        etc.) astfel incat sa fie usor de gasit de catre cei interesati.
+        Catalogmuzical.ro vine in intampinarea nevoilor tuturor profesionistilor
+        din muzica clasica de informatii rapide, concise si utile. Platforma va
+        functiona ca un punct de referinta pentru identificarea si localizarea
+        lucrarilor muzicale apartinand compozitorilor romani. Cu toate ca exista
+        informatii despre fiecare compozitor roman in parte, in diverse carti de
+        istorie sau carti biografice, nu exista un loc care sa centralizeze o
+        lista a lucrarilor compuse de toti compozitorii de muzica clasica din
+        Romania. Sunt cateva carti vechi si dictionare care catalogheaza
+        lucrarile acestora, insa informatiile sunt incomplete, neactualizate si
+        disparate.
+      </p>
     </div>
   );
 }

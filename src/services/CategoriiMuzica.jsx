@@ -20,31 +20,14 @@ export function getCategoriesMuzicaJson() {
     },
     {
       id: 4,
-      name: 'muzicaInstrumentala',
-      stil: '',
-      items: [
-        'pian',
-        'vioara',
-        'viola',
-        'violoncel',
-        'contrabas',
-        'harpa',
-        'chitara',
-        'flaut',
-        'oboi',
-        'clarinet',
-        'fagot',
-        'corn',
-        'trompeta',
-        'trombon',
-        'tuba',
-      ],
-    },
-    {
-      id: 5,
       name: 'altele',
       stil: '',
-      items: [],
+      items: [
+        'Muzică simfonică',
+        'Muzică vocal-simfonică',
+        'Muzică concertantă',
+        'Operă / Teatru / Operete',
+      ],
     },
   ];
 

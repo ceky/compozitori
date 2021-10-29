@@ -56,13 +56,14 @@ function MusicSubcategories({
 
   return (
     <ul className="music-subcategories-container">
-      {subcategories.map((subcategory, key) => (
-        <li key={key} onClick={() => onClickSubcategory(subcategory.name)}>
-          <a href="#" className={`${subcategory.selected ? 'active' : ''}`}>
-            {camelCaseToSentance(subcategory.name)}
-          </a>
-        </li>
-      ))}
+      {!!subcategories.length &&
+        subcategories.map((subcategory, key) => (
+          <li key={key} onClick={() => onClickSubcategory(subcategory.name)}>
+            <a href="#" className={`${subcategory.selected ? 'active' : ''}`}>
+              {camelCaseToSentance(subcategory.name)}
+            </a>
+          </li>
+        ))}
     </ul>
   );
 }

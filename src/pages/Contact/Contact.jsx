@@ -10,7 +10,7 @@ function Contact() {
         bineveniti sa ne contacteze pentru a ne oferi detaliile lucrarilor lor.
       </p>
 
-      <a href="mailto:office@catalogmuzical.ro">office@catalogmuzical.ro</a>
+      <a href="mailto:contact@catalogmuzical.ro">contact@catalogmuzical.ro</a>
     </div>
   );
 }

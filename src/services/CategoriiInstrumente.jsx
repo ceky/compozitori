@@ -1,43 +1,73 @@
 export function getCategoriesInstrumenteJson() {
   const categories = [
-    'corMixt',
-    'corDeFemei',
-    'corDeBarbati',
-    'corPentruVociEgale',
-    'soprana',
-    'mezzoSoprana',
-    'alto',
-    'tenor',
-    'bass',
-    'bariton',
-    'orchSimfonica',
-    'orchDeCamera',
-    'orchDeCoarde',
-    'concertSolo',
-    'vocalSimf',
-    'opera',
-    'duo',
-    'trio',
-    'cvartet',
-    'sextet',
-    'septet',
-    'octet',
-    'pian',
-    'vioara',
-    'viola',
-    'violoncel',
-    'contrabas',
-    'harpa',
-    'chitara',
-    'flaut',
-    'oboi',
-    'clarinet',
-    'fagot',
-    'corn',
-    'trompeta',
-    'trombon',
-    'tuba',
-    'percutie',
+    {
+      display: 'Pian',
+      value: 'pian',
+    },
+    {
+      display: 'Vioară',
+      value: 'vioara',
+    },
+    {
+      display: 'Violă',
+      value: 'viola',
+    },
+    {
+      display: 'Violoncel',
+      value: 'violoncel',
+    },
+    {
+      display: 'Contrabass',
+      value: 'contrabass',
+    },
+    {
+      display: 'Flaut',
+      value: 'flaut',
+    },
+    {
+      display: 'Oboi',
+      value: 'oboi',
+    },
+    {
+      display: 'Clarinet',
+      value: 'clarinet',
+    },
+    {
+      display: 'Fagot',
+      value: 'fagot',
+    },
+    {
+      display: 'Corn',
+      value: 'corn',
+    },
+    {
+      display: 'Trompetă',
+      value: 'trompeta',
+    },
+    {
+      display: 'Trombon',
+      value: 'trombon',
+    },
+    {
+      display: 'Tubă',
+      value: 'tuba',
+    },
+    {
+      display: 'Percuție',
+      value: 'percutie',
+    },
+    {
+      display: 'Harpă',
+      value: 'harpa',
+    },
+    {
+      display: 'Chitară',
+      value: 'chitara',
+    },
+    {
+      display: 'Alte Instrumente',
+      value: 'alteInstrumente',
+    },
   ];
 
   return categories;

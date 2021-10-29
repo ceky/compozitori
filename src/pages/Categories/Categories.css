@@ -19,6 +19,7 @@
 .categories-container .instrumente-container {
   border-right: 1px solid black;
   text-align: right;
+  min-height: calc(100vh - 302px);
 }
 
 .categories-container .instrumente-container a {
