@@ -25,6 +25,7 @@ header .logo {
   width: 390px;
   text-align: right;
   margin-bottom: 0.2em;
+  margin-right: 10px;
 }
 
 .header-description .bold-desc {
