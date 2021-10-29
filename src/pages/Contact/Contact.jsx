@@ -6,8 +6,8 @@ function Contact() {
   return (
     <div className="contact-container">
       <p className="italic">
-        Compozitorii romani care doresc sa fie indexati in acest catalog sunt
-        bineveniti sa ne contacteze pentru a ne oferi detaliile lucrarilor lor.
+        Compozitorii români care doresc să fie indexați în acest catalog sunt
+        bineveniți să ne contacteze pentru a ne oferi detaliile lucrărilor lor.
       </p>
 
       <a href="mailto:contact@catalogmuzical.ro">contact@catalogmuzical.ro</a>
