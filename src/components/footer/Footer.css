@@ -4,4 +4,11 @@ footer {
 
   display: flex;
   justify-content: center;
+
+  padding: 0.7em 22em;
+}
+
+footer p {
+  font-size: 0.8em;
+  margin-left: 2em;
 }

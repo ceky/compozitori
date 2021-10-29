@@ -44,7 +44,7 @@ function Home() {
         <input
           className="search-input"
           onChange={onChangeSearch}
-          placeholder="Caută"
+          placeholder="Caută pian, cvartet, soprană, nume compozitor"
           type="search"
           value={searchValue}
         />
