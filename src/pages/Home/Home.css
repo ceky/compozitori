@@ -18,6 +18,10 @@
   outline: none;
 }
 
+input:placeholder-shown {
+  text-overflow: ellipsis;
+}
+
 .home-container p {
   font-size: 0.9em;
 }
@@ -39,9 +43,8 @@ input::-webkit-search-cancel-button {
     9px center;
   border: solid 1px #ccc;
   padding: 9px 10px 9px 32px;
-  width: 55px;
-
-  width: 430px;
+  width: 100%;
+  max-width: 430px;
   background-color: #fff;
   border-color: #121412;
 }

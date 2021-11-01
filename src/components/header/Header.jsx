@@ -57,11 +57,10 @@ function Header() {
           <div>
             <div className="logo-container">
               <img src={logo} className="logo-landing" alt="Logo" />
+              <p className="subtitle">
+                Indexul digital al muzicii clasice românești
+              </p>
             </div>
-
-            <p className="subtitle">
-              Indexul digital al muzicii clasice românești
-            </p>
           </div>
         )}
 

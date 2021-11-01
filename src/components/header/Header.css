@@ -11,7 +11,7 @@ header .logo {
 }
 
 .header-container {
-  margin: 1em 7em 0em;
+  margin-top: 1em;
 }
 
 .header-extended {
@@ -48,7 +48,7 @@ menu {
 }
 
 .menu-home {
-  margin-top: 0;
+  margin-top: 2em;
 }
 
 .center {
@@ -58,29 +58,33 @@ menu {
 
 .logo-container {
   display: flex;
-  justify-content: center;
-  margin: 0;
-  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 976px;
+  width: fit-content;
 }
 
 .logo-container .logo-landing {
-  max-width: 976px;
+  max-width: 100vw;
 }
 
 .subtitle {
+  align-self: end;
   position: relative;
-  top: -42px;
-  right: -739px;
   margin: 0;
   width: fit-content;
   font-size: 0.9em;
+  margin-right: 2.4em;
+  top: -3em;
 }
 
 .header-menu-container {
   list-style-type: none;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  margin: 0;
+  margin: 0 1em;
   padding: 0;
 }
 
@@ -122,10 +126,6 @@ li.activeRoute a {
 }
 
 @media only screen and (max-width: 480px) {
-  .header-container {
-    margin: 1em 1em 0em;
-  }
-
   .languages-container {
     padding: 1em 0;
   }
@@ -148,5 +148,15 @@ li.activeRoute a {
 
   .header-description {
     text-align: center;
+  }
+
+  .subtitle {
+    margin-right: 1.4em;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .subtitle {
+    top: 0;
   }
 }

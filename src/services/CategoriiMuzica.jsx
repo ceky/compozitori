@@ -10,7 +10,7 @@ export function getCategoriesMuzicaJson() {
       id: 2,
       name: 'muzicaVocala',
       stil: 'Muzică vocală',
-      items: ['soprana', 'mezzoSoprana', 'alto', 'tenor', 'bass', 'bariton'],
+      items: ['soprană', 'mezzoSoprană', 'alto', 'tenor', 'bas', 'bariton'],
     },
     {
       id: 3,
