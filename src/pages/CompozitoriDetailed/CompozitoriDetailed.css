@@ -38,4 +38,8 @@
   .compozitor-details-container .avatar {
     position: static;
   }
+
+  .compozitor-details .table-container {
+    margin-top: 1em;
+  }
 }

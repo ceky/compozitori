@@ -37,10 +37,29 @@ table thead {
   max-width: 400px;
 }
 
+.table-search-container .opera-display {
+  min-width: 160px;
+}
+
 .table-search-container .opera-title {
   max-width: 400px;
 }
 
 .table-search-container .opera-editura {
   padding-right: 7.5em;
+}
+
+@media only screen and (max-width: 600px) {
+  .table-search-container {
+    max-width: 100vw;
+    overflow: auto;
+  }
+
+  .table-search-container .opera-compozitor {
+    padding-left: 1em;
+  }
+
+  .table-search-container .opera-editura {
+    padding-right: 1em;
+  }
 }

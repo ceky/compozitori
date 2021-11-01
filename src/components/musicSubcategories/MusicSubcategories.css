@@ -4,6 +4,7 @@
   padding: 0;
 
   display: flex;
+  flex-wrap: wrap;
 
   margin-left: 110px;
   margin-bottom: 2em;
@@ -20,4 +21,11 @@
 
 .music-subcategories-container li a.active {
   font-weight: 700;
+}
+
+@media only screen and (max-width: 600px) {
+  .music-subcategories-container {
+    margin: 1em;
+    font-size: 0.8em;
+  }
 }
