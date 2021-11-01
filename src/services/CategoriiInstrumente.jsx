@@ -18,7 +18,7 @@ export function getCategoriesInstrumenteJson() {
     },
     {
       display: 'Contrabass',
-      value: 'contrabass',
+      value: 'contrabas',
     },
     {
       display: 'Flaut',

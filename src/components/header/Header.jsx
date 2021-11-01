@@ -90,6 +90,7 @@ function Header() {
             >
               <a href="/categorii">CATEGORII</a>
             </li>
+            <hr />
             <li
               className={location.pathname === '/about-us' ? 'activeRoute' : ''}
             >

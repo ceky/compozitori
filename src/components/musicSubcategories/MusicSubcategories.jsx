@@ -41,6 +41,32 @@ function MusicSubcategories({
       return;
     }
 
+    if (selectedCategory === 'soprană') {
+      axios.get(`${getOpereInstrumentUrl}soprana`).then((response) => {
+        const opere = [];
+        for (const [key, value] of Object.entries(response.data)) {
+          opere.push(JSON.parse(value));
+        }
+
+        // update table
+        handleSubcategoryChange(opere);
+      });
+      return;
+    }
+
+    if (selectedCategory === 'mezzoSoprană') {
+      axios.get(`${getOpereInstrumentUrl}mezzoSoprana`).then((response) => {
+        const opere = [];
+        for (const [key, value] of Object.entries(response.data)) {
+          opere.push(JSON.parse(value));
+        }
+
+        // update table
+        handleSubcategoryChange(opere);
+      });
+      return;
+    }
+
     axios
       .get(`${getOpereInstrumentUrl}${selectedCategory}`)
       .then((response) => {
