@@ -39,3 +39,10 @@ a {
 .page-container {
   flex-grow: 1;
 }
+
+tbody:before {
+  content: '@';
+  display: block;
+  line-height: 25px;
+  text-indent: -99999px;
+}

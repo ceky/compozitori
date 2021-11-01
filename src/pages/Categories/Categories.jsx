@@ -31,6 +31,11 @@ function Categories({ handleInstrumentSelect, handleCategorieMuzicalaSelect }) {
   };
 
   const onClickCategorieMuzicala = (categorieMuzicala, subcategorii = []) => {
+    if (categorieMuzicala === 'Operă / Teatru / Operete') {
+      retrieveOperaTeatruOperete(categorieMuzicala);
+      return;
+    }
+
     axios.get(`${getOpereStilUrl}${categorieMuzicala}`).then((response) => {
       const opere = [];
       for (const [key, value] of Object.entries(response.data)) {
@@ -50,6 +55,29 @@ function Categories({ handleInstrumentSelect, handleCategorieMuzicalaSelect }) {
 
       handleCategorieMuzicalaSelect(categorieMuzicala, opere, subcategorii);
     });
+  };
+
+  const retrieveOperaTeatruOperete = (categorieMuzicala) => {
+    const requestOne = axios.get(`${getOpereStilUrl}Muzică de teatru`);
+    const requestTwo = axios.get(`${getOpereStilUrl}Muzică de scenă`);
+
+    axios.all([requestOne, requestTwo]).then(
+      axios.spread((...responses) => {
+        const opere = [];
+        const responseOne = responses[0].data;
+        const responseTwo = responses[1].data;
+
+        for (const [key, value] of Object.entries(responseOne)) {
+          opere.push(JSON.parse(value));
+        }
+
+        for (const [key, value] of Object.entries(responseTwo)) {
+          opere.push(JSON.parse(value));
+        }
+
+        handleCategorieMuzicalaSelect(categorieMuzicala, opere, []);
+      })
+    );
   };
 
   const capitalize = (text) => {
