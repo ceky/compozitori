@@ -5,3 +5,9 @@
 .contact-container a {
   color: rgb(4, 4, 173);
 }
+
+@media only screen and (max-width: 480px) {
+  .contact-container {
+    margin: 3em 1em;
+  }
+}

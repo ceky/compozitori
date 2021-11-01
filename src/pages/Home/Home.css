@@ -24,6 +24,7 @@ input:placeholder-shown {
 
 .home-container p {
   font-size: 0.9em;
+  text-align: center;
 }
 
 .home-container input[type='search'] {

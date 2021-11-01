@@ -24,7 +24,7 @@
   border-bottom: 1px solid white;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 6000px) {
   .alphabet-container {
     flex-wrap: wrap;
   }

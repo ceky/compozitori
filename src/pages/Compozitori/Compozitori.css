@@ -34,4 +34,12 @@
   .compozitori-container {
     margin: 2em 1em;
   }
+
+  .big-letter {
+    display: none;
+  }
+
+  .compozitori-list {
+    margin-top: 2em;
+  }
 }
