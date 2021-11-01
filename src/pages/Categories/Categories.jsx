@@ -36,6 +36,29 @@ function Categories({ handleInstrumentSelect, handleCategorieMuzicalaSelect }) {
       return;
     }
 
+    if (categorieMuzicala === 'Muzică vocală') {
+      axios.get(`${getOpereInstrumentUrl}bioFr`).then((response) => {
+        const opere = [];
+        for (const [key, value] of Object.entries(response.data)) {
+          opere.push(JSON.parse(value));
+        }
+
+        if (subcategorii.length) {
+          subcategorii.unshift('Toate');
+
+          subcategorii = subcategorii.map((subcategory) => {
+            return {
+              selected: subcategory === 'Toate' ? true : false,
+              name: subcategory,
+            };
+          });
+        }
+
+        handleCategorieMuzicalaSelect(categorieMuzicala, opere, subcategorii);
+      });
+      return;
+    }
+
     axios.get(`${getOpereStilUrl}${categorieMuzicala}`).then((response) => {
       const opere = [];
       for (const [key, value] of Object.entries(response.data)) {
