@@ -1,5 +1,5 @@
 // http://3.126.51.235:5000/api/v1/resources/opera_instrument?instrument=pian
-const baseDomain = 'http://3.126.51.235:5000/api/v1/resources';
+const baseDomain = 'https://3.126.51.235:5000/api/v1/resources';
 
 const getCompozitori = `${baseDomain}/nume`;
 const getCompozitorBio = `${baseDomain}/bioRo?nume=`;
