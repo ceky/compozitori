@@ -20,6 +20,8 @@ import Contact from './pages/Contact/Contact';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 
+import CookieConsent from 'react-cookie-consent';
+
 ReactDOM.render(
   <React.StrictMode>
     <Router>
@@ -139,6 +141,10 @@ function App() {
           </Route>
         </Switch>
       </div>
+
+      <CookieConsent buttonText="Accept">
+        Acest site utilizează module cookie pentru a facilita navigarea.
+      </CookieConsent>
 
       <Footer />
     </div>
