@@ -1,4 +1,3 @@
-// http://3.126.51.235:5000/api/v1/resources/opera_instrument?instrument=pian
 const baseDomain = 'https://3.126.51.235:5000/api/v1/resources';
 
 const getCompozitori = `${baseDomain}/nume`;

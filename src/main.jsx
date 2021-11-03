@@ -22,6 +22,10 @@ import Footer from './components/footer/Footer';
 
 import CookieConsent from 'react-cookie-consent';
 
+const CookieConsentVite = CookieConsent.default
+  ? CookieConsent.default
+  : CookieConsent;
+
 ReactDOM.render(
   <React.StrictMode>
     <Router>
@@ -142,9 +146,9 @@ function App() {
         </Switch>
       </div>
 
-      <CookieConsent buttonText="Accept">
+      <CookieConsentVite buttonText="Accept">
         Acest site utilizează module cookie pentru a facilita navigarea.
-      </CookieConsent>
+      </CookieConsentVite>
 
       <Footer />
     </div>
